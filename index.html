@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>navbar</title>
+    <title>index</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/f88ab20891.js" crossorigin="anonymous"></script>
     <style>
@@ -55,19 +55,27 @@
             display: flex;
             gap: 10px;
         }
-        .upper-navbar>.logo{
+        .upper-navbar>a{
+            width: 12%;
             display: flex;
-            width:12%;
+            justify-content: center;
             align-items: center;
-            cursor: pointer;
+
         }
-        .upper-navbar>.logo>img{
-            height: 40%;
+        .upper-navbar>a>.logo{
+            width: 100%;
             display: flex;
+            align-items: center;
+            gap: 4px;
         }
-        .upper-navbar>.logo>h2{
+        .upper-navbar>a>.logo>img{
+            height: 30px;
+            width: auto;
+        }
+        .upper-navbar>a>.logo>h2{
             font-size:37px;
             font-weight:lighter;
+            color: black;
             font-family: Helvetica,Helvetica,Arial,sans-serif;
         }
         .search-bar{
@@ -207,8 +215,6 @@
             width: 87%;
             height: auto;
             margin: auto;
-            padding-top: 7px;
-            padding-bottom: 7px;
         }
         a{
             text-decoration: none;
@@ -217,35 +223,338 @@
             display: flex;
             justify-content: space-between;
             list-style: none;
+            
+        }
+        .nav-2>div>ul>li{
+            display: block;
+            padding-top: 7px;
+            padding-bottom: 7px;
         }
         .nav-2>div>ul>li>a{
             color: black;
             font-family: Helvetica,Helvetica,Arial,sans-serif;
             font-size: 14px;
         }
+        .top-section{
+            width: 75%;
+            height: auto;
+            background-image: url("https://ak1.ostkcdn.com/img/mxc/09192022-HP-A1-INTL-1400x550_INTL.jpg");
+            margin: auto;
+            margin-top: 127px;
+            background-size: cover;
+        }
+        .furniture-menu{
+            display: none;
+        }
+        .nav-2>div>ul>li:hover{
+            border-bottom: 2px solid black;
+            display: inline-flex;
+        }
+        
+        h1{
+            text-align: center;
+            font-family: Helvetica ,Helvetica,Arial,sans-serif;
+            color: #2f3337;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .limited-time-deals{
+            width: 75%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            
+        }
+        .limited-time-deals>a>div>img{
+            width: 100%;
+            background-color: #f9fafb;
+        }
+        .limited-time-deals>a>div>p{
+            font-family:  Helvetica,Arial, sans-serif;
+            color: #2f3337;
+            text-align: center;
+            font-weight: 700;
+            width: 90%;
+        }
+        .mid-img{
+            width: 75%;
+            margin: auto;
+            margin-top: 60px;
+            margin-bottom: 60px;
+            background-image: url("https://ak1.ostkcdn.com/img/mxc/09192022-MOPS-1400x550_Promo1-INTL.jpg?imwidth=2048");
+        }
+        .each-category{
+            width: 70%;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            margin: auto;
+            height: auto;
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .each-category >a>div>img{
+            width: 100%;
+        }
+        .each-category >a>div>p{
+            text-align: center;
+            color: #2f3337;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .bottom-img{
+            width: 75%;
+            background-image: url("https://ak1.ostkcdn.com/img/mxc/09192022-MOPS-1400x550_Promo2-INTL.jpg?imwidth=2048");
+            margin: auto;
+            margin-top: 70px;
+            margin-bottom: 70px;
+            
+        }
+        
+        .budget-item{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr) ;
+            gap:10px;
+        }
+        .budget-item>div{
+            background-color:#f5f5f5;
+            
+        }
+        .budget-item>a>div>div+div{
+            margin-top: 0px;
+            background-color: #f5f5f5;
+            height: 130px;
+        }
+        .budget-item>a>div>div+div>h2{
+            font-family: Helvetica ,Helvetica,Arial,sans-serif;
+            color: #2f3337;
+            width: 85%;
+            margin: auto;
+            padding-top: 10px;
+        }
+        .budget-item>a>div>div+div>p{
+            font-family: Helvetica ,Helvetica,Arial,sans-serif;
+            color: #2f3337;
+            width: 85%;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 10px;
+            padding-bottom: 30px;
+        }
         
         
+        .budget-item-2{
+            width: 75%;
+            margin: auto;
+            display: flex;
+            gap:20px;
+            margin-bottom: 70px;
+        }
+        .budget-item-2>div{
+            background-color:#f5f5f5;
+        }
+        .budget-item-2>a>div>div+div{
+            margin-top: 0px;
+            background-color: #f5f5f5;
+            height: 90px;
+            text-align: center;
+        }
+        .budget-item-2>a>div>div:first-child>img{
+            width: 100%;
+        }
+        .budget-item-2>a>div>div+div>h2{
+            font-family: Helvetica ,Helvetica,Arial,sans-serif;
+            color: #2f3337;
+            width: 85%;
+            margin: auto;
+            font-size: 17px;
+            padding-top: 10px;
+        }
+        .budget-item-2>a>div>div+div>p{
+            font-family: Helvetica ,Helvetica,Arial,sans-serif;
+            color: #2f3337;
+            width: 60%;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 10px;
+            padding-bottom: 10px;
+            
+        }
+        
+        .budget-item-3{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:20px;
+            margin-bottom: 40px;
+        }
+        .budget-item-3>div{
+            background-color:#f5f5f5;
+        }
+        .budget-item-3>a>div>div+div{
+            margin-top: 0px;
+            background-color: #f5f5f5;
+            height: 90px;
+            
+        }
+        .budget-item-3>a>div>div:first-child>img{
+            width: 100%;
+        }
+        .budget-item-3>a>div>div+div>h2{
+            font-family: Helvetica ,Helvetica,Arial,sans-serif;
+            color: #2f3337;
+            width: 85%;
+            margin: auto;
+            font-size: 17px;
+            padding-top: 10px;
+        }
+        .budget-item-3>a>div>div+div>p{
+            font-family: Helvetica ,Helvetica,Arial,sans-serif;
+            color: #2f3337;
+            width: 85%;
+            font-size: 16px;
+            margin: auto;
+            margin-top: 10px;
+            padding-bottom: 10px;
+            
+        }
+        
+        .tri-img{
+            margin: auto;
+            margin-bottom: 70px;
+            width: 75%;
+            background-size: cover;
+            background-image: url("https://ak1.ostkcdn.com/img/mxc/030822-RIUpdate-Dsk.jpg?imwidth=1920");
+        }
+        .tri-img>img{
+            width: 100%;
+            margin: auto;
+        }
+        
+        .bottom-btn{
+            width: 7.5%;
+            margin: auto;
+            border-radius: 5px;
+            font-family:Helvetica, sans-serif;
+            text-align: center;
+            color: #fff;
+            background-color: #2f3337;
+            padding: 13px;
+            margin-bottom: 70px;
+        }
+        
+        .searches{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .searches>a>div{
+            background-color: #f5f6f7;
+            color: #545658;
+            text-align: center;
+            height: 50px;
+            display: grid;
+            align-items: center;
+            font-family:Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        Footer{
+            background-color: #545658;
 
-    </style>
+        }
+        .Footer{
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 350px;
+            margin-top: 40px;
+            padding-top: 60px;
+            
+        }
+        .Footer h3{
+            color: #fff;
+            font-family: Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 40px;
+        }
+        .Footer p{
+            color: #fff;
+            font-family: Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 200;
+            line-height: 40px;
+        }
+        .feet{
+            background-color: #2f3337;
+
+        }
+        .footer-nav{
+            display: flex;
+            align-items: center;
+            margin: auto;
+            width: 90%;
+            justify-content:space-between;
+            height: 100px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 20px;
+            font-family: Helvetica, sans-serif;
+        }
+        .footer-nav>div+div>ul{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            color: #fff;
+            align-items: center;
+        }
+        .footer-nav>div+div>ul>li>a{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            color: #fff;
+            align-items: center;
+        }
+        .footer-nav>div+div>ul>li>a>span{
+            display: flex;
+            align-items: center;
+        }
+        .footer-nav>div+div>ul>li>a>span>img{
+            height: 20px;
+        }
+        </style>
 </head>
 <body>
     <div class="navbar">
-    <div class="country">
-
-        <div class="nav1">
-            <span>Ships to:</span><span><img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt="flag image"></span><span>INDIA</span>
+        <div class="country">
+            
+            <div class="nav1">
+                <span>Ships to:</span><span><img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt="flag image"></span><span>INDIA</span>
+            </div>
         </div>
-    </div>
-    
-<div id="fixed">
-    <!-- first navbar -->
-    <div class="upper-navbar">
         
+        <div id="fixed">
+            <!-- first navbar -->
+            <div class="upper-navbar">
+                <a href="index.html">
+
             <div class="logo">
                 <img src="https://media.glassdoor.com/sqll/14907/overstock-com-squarelogo-1529535998697.png" alt="logo">
-            
-            <h2>overstock</h2>
-        </div>
+                
+                <h2>overstock</h2>
+            </div>
+        </a>
         <div class="search-bar">
             <input type="text" placeholder="Search... everything you find ships for free"  >
             <button type="submit"><i class="fa fa-search" ></i></button>
@@ -319,7 +628,445 @@
 </div>
 
         
+<!-- /* main content  */ -->
+<main-content>
+
+    <a href="#">
+        <div class="top-section">
+            <img src="https://ak1.ostkcdn.com/img/mxc/09192022-HP-A1-INTL-1400x550_INTL.svg" alt="">
+        </div>
+    </a>
+    
+    
+    <h1>Limited-Time Deals</h1>
+    
+    
+    <div class="limited-time-deals">
+        <a href="#">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/09192022_HB_DOMESTIC_1.svg?imwidth=1920" alt="discount 20%">
+                <p>select Rugs</p>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/09192022_HB_DOMESTIC_2.svg?imwidth=1920" alt="discount 15%">
+                <p>select living room furniture</p>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/09192022_HB_DOMESTIC_3.svg?imwidth=1920" alt="discount 15%">
+                <p>select bedroom furniture</p>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/09262022_HB_DOMESTIC_4.svg?imwidth=1920" alt="discount 15%">
+                <p>select lightning & ceiling fans</p>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/09192022_HB_DOMESTIC_5.svg?imwidth=1920" alt="discount 15%">
+                <p>select bedding</p>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/09262022_HB_DOMESTIC_6.svg?imwidth=1920" alt="discount 15%">
+                <p>select helloween decor</p>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="mid-img">
+        <img src="https://ak1.ostkcdn.com/img/mxc/09192022-MOPS-V2-1400x550_Promo1-INTL.svg?imwidth=1920" alt="">
+    </div>
 
     
+    <h1>Fresh finds in each Category</h1>
+
+    
+    <div class="each-category">
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/11192021-CatSilo-Furniture.png?imwidth=1920" alt="">
+                <p>Furniture</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/11152021-CatSilo-AreaRugs.png?imwidth=1920" alt="">
+                <p>Area Rugs</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/11152021-CatSilo-BedBath.png?imwidth=1920" alt="">
+                <p>Bedding</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/11152021-CatSilo-Decor.png?imwidth=1920" alt="">
+                <p>Home Decor</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/CatSilo-Window-040721.jpg?imwidth=1920" alt="">
+                <p>Window Treatments</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/11152021-CatSilo-Kitchen.png?imwidth=1920" alt="">
+                <p>Kitchen</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/11192021-CatSilo-Outdoor.png?imwidth=1920" alt="">
+                <p>Outdoor</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/01112021-CatSilo-HomeImp.jpg?imwidth=1920" alt="">
+                <p>Home Improvement</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/11152021-CatSilo-Storage.png?imwidth=1920" alt="">
+                <p>Storage</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/01112021-CatSilo-Mattresses.jpg?imwidth=1920" alt="">
+                <p>Mattresses</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/11152021-CatSilo-Lighting.png?imwidth=1920" alt="">
+                <p>Lightning</p>
+            </div>
+        </a>
+        <a href="">
+            <div>
+                <img src="https://ak1.ostkcdn.com/img/mxc/CatSilo-AllDeals-040721.jpg?imwidth=1920" alt="">
+                <p>Shop All Deals</p>
+            </div>
+        </a>
+    </div>
+
+    
+    <h1>Fall Home Updates for Every Budget</h1>
+
+
+
+    <div class="budget-item">
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/08082022-Frame1-GrillsOutdoor.jpg?imwidth=1920" alt="img">
+                </div>
+                <div>
+                    <h2>Grills And outdoor Cooking</h2>
+                    <p>Save on the best of the best for your backyard barbecue.</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/08082022-Frame2-OutdoorDining.jpg?imwidth=1920" alt="">
+                </div>
+                <div>
+                    <h2>Outdoor Seating Sets</h2>
+                    <p>Soking up the sun in style has never been more affordable.</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/08082022-Frame3-BohoMachineWashable.jpg?imwidth=1920" alt="">
+                </div>
+                <div>
+                    <h2>Machine Washable Rugs</h2>
+                    <p>Great deals on rugs that are easy to clean as they are to love.</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/08082022-Frame4-Rustic.jpg?imwidth=1920" alt="">
+                </div>
+                <div>
+                    <h2>Rushtick Nightstands</h2>
+                    <p>Save on bedside tables that  add llog-cabin chic to any bedroom.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    
+
+
+    <div class="bottom-img">
+        <img src="https://ak1.ostkcdn.com/img/mxc/09192022-MOPS-V2-1400x550_Promo2-INTL.svg?imwidth=1920" alt="">
+    </div>
+
+
+    <h1>Overstock Featured Brands</h1>
+
+
+    <div class="budget-item-2">
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/26986507_C_Mod.jpg?imwidth=1920" alt="">
+                </div>
+                <div>
+                    <h2>Extra 20% off</h2>
+                    <p>Select Furniture by Signature Design by Ashley</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/HP_C_Mod_33517468_2.jpg?imwidth=1920" alt="img">
+                </div>
+                <div>
+                    <h2>Save On</h2>
+                    <p>Select Mattresses by Tempur-Pedic</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/HP_C_Mod_39470048.jpg?imwidth=1920" alt="">
+                </div>
+                <div>
+                    <h2>Extra 20% off</h2>
+                    <p>Select Rugs by Artistic Weavers</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/HP_C_Mod_35950863.jpg?imwidth=1920" alt="">
+                </div>
+                <div>
+                    <h2>Extra 20% off</h2>
+                    <p>Select Rugs by Balta</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="tri-img">
+            <img src="https://ak1.ostkcdn.com/img/mxc/030822-RIUpdate-Dsk.svg?imwidth=1920" alt="">
+    </div>
+
+
+    <h1>We've Got Your Style</h1>
+
+
+    <div class="budget-item-3">
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/030822-SBS-MidCenMod.jpg?imwidth=1920" alt="">
+                </div>
+                <div>
+                    <h2>Mid-Century Modern</h2>
+                    <p>Ratio meets modern chic in these clean lines and vibrant tones.</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/030822-SBS-Traditional.jpg?imwidth=1920" alt="img">
+                </div>
+                <div>
+                    <h2>Traditional</h2>
+                    <p>Cozy designs, clean and classic, give this style it's signature appeal.</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div>
+                <div>
+                    <img src="https://ak1.ostkcdn.com/img/mxc/030822-SBS-Farmhouse.jpg?imwidth=1920" alt="">
+                </div>
+                <div>
+                    <h2>Farmhouse</h2>
+                    <p>Country comforts abound in this fresh take on rustic home decor</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    
+    <a href="">
+        <div class="bottom-btn">See All Items</div>
+    </a>
+    
+    <h1>Trending Searches</h1>
+    
+    <div class="searches">
+        <a href="#">
+            <div>Mugs</div>
+        </a>
+        <a href="#">
+            <div>Blankets</div>
+        </a>
+        <a href="#">
+            <div>Cookie Cutters</div>
+        </a>
+        <a href="#">
+            <div>Air Fryers</div>
+        </a>
+        <a href="#">
+            <div>Kitchen Mixers</div>
+        </a>
+        <a href="#">
+            <div>Lamps</div>
+        </a>
+        <a href="#">
+            <div>Towels</div>
+        </a>
+        <a href="#">
+            <div>Tree Skirts</div>
+        </a>
+        <a href="#">
+            <div>Garland</div>
+        </a>
+        <a href="#">
+            <div>Fall Wreathes</div>
+        </a>
+        <a href="#">
+            <div>Christmas Trees</div>
+        </a>
+        <a href="#">
+            <div>Fireplaces</div>
+        </a>
+    </div>
+    <hr>
+</main-content>
+    
+    <Footer>
+        <div class="Footer">
+            <div>
+                <a href="#">
+                    <h3>MY ACCOUNT</h3>
+                </a>
+                <a href="#">
+                    <p>Orders & Returns</p>
+
+                </a>
+                <a href="#">
+                    <p>Email Preferences</p>
+
+                </a>
+                <a href="#">
+                    <p>Account Settings</p>
+
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <h3>LET US HELP</h3>
+
+                </a>
+                <a href="#">
+                    <p>Contact Customer Care</p>
+
+                </a>
+                <a href="#">
+                    <p>Shipping Information</p>
+
+                </a>
+                <a href="#">
+                    <p>Return Policy</p>
+
+                </a>
+                <a href="#">
+                    <p>International Help</p>
+
+                </a>
+                <a href="#">
+                    <p>Accessibility</p>
+
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <h3>COMPANY INFORMATION</h3>
+
+                </a>
+                <a href="#">
+                    <p>About Overstock™</p>
+
+                </a>
+                <a href="#">
+                    <p>Contact Us</p>
+
+                </a>
+                <a href="#">
+                    <p>Careers</p>
+
+                </a>
+                <a href="#">
+                    <p>Investor Relations</p>
+
+                </a>
+                <a href="#">
+                    <p>Sell Your Products</p>
+
+                </a>
+                <a href="#">
+                    <p>Supply Chain Transparency</p>
+
+                </a>
+            </div>
+
+            <div>
+                <a href="#"><h3>MORE WAYS TO SHOP</h3></a>
+                <a href="#"><p>Tips & Ideas</p></a>
+                <a href="#"><p>Deals</p></a>
+                <a href="#"><p>Clearance</p></a>
+                <a href="#"><p>New Arrivals</p></a>
+            </div>
+        </div>
+
+    <div class="feet">
+        <div class="footer-nav">
+            <div>
+                <p>© Copyright 2022, Overstock.com®, Inc.</p>
+                <p>799 Coliseum Way Midvale, UT 84047 | 1-800-843-2446</p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">*Promotion Terms</a></li>
+                    <li><a href="#"><span>Ship to:<img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt=""></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </Footer>
 </body>
 </html>
