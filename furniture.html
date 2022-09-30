@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>furnitures</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f88ab20891.js" crossorigin="anonymous"></script>
+    <style>
+
+*{
+            margin: 0;
+            padding: 0;
+        }
+        hr{
+            border: 1px solid #dadcdf;
+        }
+        .nav1{
+            height: 30px;
+            width: 87%;
+            margin: auto;
+            display: flex;
+        }
+        .nav1>span:first-child{
+            color: grey;
+            font-size: 75%;
+            display: flex;
+            align-items: center;
+        }
+        .nav1>span{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 14px;
+            font-family: Helvetica,Helvetica,Arial,sans-serif;
+        }
+        .nav1>span:last-child{
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+        .nav1>span:nth-child(2){
+            display: flex;
+            align-items: center;
+        }
+        .nav1>span>img{
+            cursor: pointer;
+            height: 130%;
+            clip-path: circle();
+            background-color: #f9fafb;
+        }
+        .upper-navbar{
+            height: 80px;
+            width: 87%;
+            margin: auto;
+            display: flex;
+            gap: 10px;
+        }
+        .upper-navbar>a{
+            width: 12%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .upper-navbar>a>.logo{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .upper-navbar>a>.logo>img{
+            height: 30px;
+            width: auto;
+        }
+        .upper-navbar>a>.logo>h2{
+            font-size:37px;
+            font-weight:lighter;
+            color: black;
+            font-family: Helvetica,Helvetica,Arial,sans-serif;
+        }
+        .search-bar{
+            display: flex;
+            align-items: center;
+            width: 76%;
+            
+            
+        }
+        .search-bar>input{
+            width: 95%;
+            height: 30px;
+            font-size: 16px;
+            padding-left: 10px;
+            background-color: #f9fafb;
+            border: 1px solid #dadcdf;
+        }
+        button{
+            width: 40px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            transform: translateX(-1px);
+            height: 42%;
+            color:#f9fafb;
+            background-color: red;
+        }
+        .upper-navbar{
+            background-color: #fff;
+            width: 87%;
+            position: relative;
+            margin: auto;
+        }
+        .upper-navbar>div:last-child{
+            align-items: center;
+            width: 12%;
+            display: flex;
+            gap: 10px;
+            height: 100%;
+            justify-content: center;
+            
+        }
+        .upper-navbar>div:last-child>a{
+            width: 33%;
+            height: 44%;
+        }
+        .upper-navbar>div:last-child>a>.Acc{
+            height: 100%;
+        }
+        .upper-navbar>div:last-child>a>.cart{
+            height: 100%;
+        }
+        .upper-navbar>div:last-child>a>.lists{
+            height: 100%;
+        }
+        .upper-navbar>div:last-child>a>.Acc>div:nth-child(1){
+            height: 55%;
+            display: flex;
+            justify-content: center;
+        }
+        .upper-navbar>div:last-child>a>.lists>div:nth-child(1){
+            height: 55%;
+            display: flex;
+            justify-content: center;
+        }
+        .upper-navbar>div:last-child>a>.cart>div:nth-child(1){
+            height: 55%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        
+        .upper-navbar>div:last-child>a>.Acc>div:nth-child(2){
+            height: 45%;
+            
+        }
+        .upper-navbar>div:last-child>a>.lists>div:nth-child(2){
+            height: 45%;
+        }
+        .upper-navbar>div:last-child>a>.cart>div:nth-child(2){
+            height: 45%;
+        }
+        
+        
+        .upper-navbar>div:last-child>a>.Acc>div:nth-child(2)>p{
+            width: 100%;
+            font-size: 100%;
+            color: black;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .upper-navbar>div:last-child>a>.lists>div:nth-child(2)>p{
+            color: black;
+            width: 100%;
+            font-size: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        .upper-navbar>div:last-child>a>.cart>div:nth-child(2)>p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            width: 100%;
+            font-size: 100%;
+        }
+        #fixed{
+            
+            background-color: white;
+            width: 100%;
+            
+        }
+        .navbar{
+            top:0;
+            width:100%;
+            z-index:100;
+            position:fixed;
+        }
+        .country{
+            border: 1px solid #dadcdf;
+            background-color: #f9fafb;
+        }
+        .nav-2{
+            width: 100%;
+            background-color: #fff;
+            height: auto;
+            border: 1px solid #dadcdf;
+        }
+        .nav-2>div{
+            width: 87%;
+            height: auto;
+            margin: auto;
+        }
+        a{
+            text-decoration: none;
+        }
+        .nav-2>div>ul{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            
+        }
+        .nav-2>div>ul>li{
+            display: block;
+            padding-top: 7px;
+            padding-bottom: 7px;
+        }
+        .nav-2>div>ul>li>a{
+            color: black;
+            font-family: Helvetica,Helvetica,Arial,sans-serif;
+            font-size: 14px;
+        }
+        .nav-2>div>ul>li:hover{
+            border-bottom: 2px solid black;
+            display: inline-flex;
+        }
+
+              /* footer  */
+              Footer{
+            background-color: #545658;
+
+        }
+        .Footer{
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 350px;
+            margin-top: 40px;
+            padding-top: 60px;
+            
+        }
+        .Footer h3{
+            color: #fff;
+            font-family: Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 40px;
+        }
+        .Footer p{
+            color: #fff;
+            font-family: Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 200;
+            line-height: 40px;
+        }
+        .feet{
+            background-color: #2f3337;
+
+        }
+        .footer-nav{
+            display: flex;
+            align-items: center;
+            margin: auto;
+            width: 90%;
+            justify-content:space-between;
+            height: 100px;
+            color: #fff;
+            font-size: 12px;
+            line-height: 20px;
+            font-family: Helvetica, sans-serif;
+        }
+        .footer-nav>div+div>ul{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            color: #fff;
+            align-items: center;
+        }
+        .footer-nav>div+div>ul>li>a{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            color: #fff;
+            align-items: center;
+        }
+        .footer-nav>div+div>ul>li>a>span{
+            display: flex;
+            align-items: center;
+        }
+        .footer-nav>div+div>ul>li>a>span>img{
+            height: 20px;
+        }
+
+        .fur-h1{
+            margin: auto;
+            margin-top: 160px;
+            width: 75%;
+            font-family:  Helvetica, sans-serif;
+            font-size: 20px;
+            color: #2f3337;
+        }
+        .fur-top{
+            width: 75%;
+            margin: auto;
+            display: flex;
+            gap:25px;
+            margin-top: 50px;
+        }
+
+        h2{
+            color: #2f3337;
+            font-family: Helvetica, sans-serif;
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+        .fur-bar{
+            width: 25%;
+        }
+        .fur-bar>ul{
+            list-style: none;
+        }
+        .fur-bar>ul>li{
+            text-decoration: none;
+            line-height: 35px;
+            
+        }
+        .fur-bar>ul>li>a{
+            margin-left: 10px;
+            color: #2f3337;
+            font-size: 17px;
+            font-family:Helvetica, sans-serif;
+        }
+        .fur-bar>ul>li:hover{
+            border-left: 2px solid teal;
+            background-color: #dadcdf;
+
+        }
+        .fur-bar+div{
+            width: 50%;
+        }
+        .fur-top>div:last-child{
+            width: 25%;
+        }
+        .fur-top>div:last-child>div{
+            height: 50%;
+        }
+        .fur-top>div:last-child>div img{
+            margin-top: 40%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="country">
+            
+            <div class="nav1">
+                <span>Ships to:</span><span><img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt="flag image"></span><span>INDIA</span>
+            </div>
+        </div>
+        
+        <div id="fixed">
+            <!-- first navbar -->
+            <div class="upper-navbar">
+                <a href="index.html">
+
+            <div class="logo">
+                <img src="https://media.glassdoor.com/sqll/14907/overstock-com-squarelogo-1529535998697.png" alt="logo">
+                
+                <h2>overstock</h2>
+            </div>
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search... everything you find ships for free"  >
+            <button type="submit"><i class="fa fa-search" ></i></button>
+        </div>
+        <div>
+            <a href="signup.html">
+                <div class="Acc">
+                    
+                    <div>
+                        <i class="fa-regular fa-user" style="font-size: 25px; color: black;" ></i>
+                    </div>
+                    
+                    <div>
+                        <p>Account</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="lists">
+                    
+                    <div>
+                        <i class="fa-regular fa-heart" style="font-size: 25px; color: black;"></i>
+                    </div>
+                    
+                    <div>
+                        <p>Lists</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="cart">
+                    
+                    <div>
+                        <i class="fa-solid fa-cart-shopping" style="font-size: 22px; color: black;"></i></i>
+                    </div>
+                    
+                    <div>
+                        <p>Cart</p>
+                    </div>
+                </div>
+            </a>
+
+            
+            
+        </div>
+        
+    </div>
+    <!-- second navbar -->
+    <div class="nav-2">
+        <div>
+            <ul>
+                <li><a href="furniture.html">Furniture</a></li>
+                <li><a href="#">Rugs</a></li>
+                <li><a href="#">Decor</a></li>
+                <li><a href="#">Bedding</a></li>
+                <li><a href="#">Home Improvement</a></li>
+                <li><a href="#">Kitchen</a></li>
+                <li><a href="#">Outdoor</a></li>
+                <li><a href="#">Lightning</a></li>
+                <li><a href="#">Kids Baby</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">Ideas</a></li>
+                <li><a style="color: red;" href="#">Sales & Deals</a></li>
+            </ul>
+        
+        </div>
+    </div>
+    
+</div>
+    
+    </div>
+    <div class="fur-h1">
+        <h1>Furniture</h1>
+    </div>
+
+    <div class="fur-top">
+        <div class="fur-bar">
+            <h2>Featured Categories</h2>
+            <ul>
+                <li><a href="#">Living Room Furniture</a></li>
+                <li><a href="#">Dining Room Furniture</a></li>
+                <li><a href="#">Bedroom Furniture</a></li>
+                <li><a href="#">Patio Furniture</a></li>
+                <li><a href="#">Kitchen Furniture</a></li>
+                <li><a href="#">Entryway Furniture</a></li>
+                <li><a href="#">Home Office Furniture</a></li>
+                <li><a href="#">Small Space Furniture</a></li>
+                <li><a href="#">Bathroom Furniture</a></li>
+                <li><a style="color: red;" href="#">Shop All Furniture on Sale</a></li>
+            </ul>
+        </div>
+        <div>
+            <a href="#"><img src="https://ak1.ostkcdn.com/img/mxc/09262022_Desktop_Furniture_AshleyFurniture.jpg?imwidth=680" alt=""></a>
+        </div>
+        <div>
+            <div>
+                <div></div>
+                <div><a href="#"><img src="https://ak1.ostkcdn.com/img/mxc/2022-04-12-temporary-virtual-showcase.png" alt=""></a></div>
+            </div>
+            <div>
+                <div>
+                    <a href="#"><img src="https://ak1.ostkcdn.com/img/mxc/09272022_Furniture_MM_01.png?imwidth=320" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ <!-- <footer></footer> -->
+ <Footer>
+    <div class="Footer">
+        <div>
+            <a href="#">
+                <h3>MY ACCOUNT</h3>
+            </a>
+            <a href="#">
+                <p>Orders & Returns</p>
+
+            </a>
+            <a href="#">
+                <p>Email Preferences</p>
+
+            </a>
+            <a href="#">
+                <p>Account Settings</p>
+
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <h3>LET US HELP</h3>
+
+            </a>
+            <a href="#">
+                <p>Contact Customer Care</p>
+
+            </a>
+            <a href="#">
+                <p>Shipping Information</p>
+
+            </a>
+            <a href="#">
+                <p>Return Policy</p>
+
+            </a>
+            <a href="#">
+                <p>International Help</p>
+
+            </a>
+            <a href="#">
+                <p>Accessibility</p>
+
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <h3>COMPANY INFORMATION</h3>
+
+            </a>
+            <a href="#">
+                <p>About Overstock™</p>
+
+            </a>
+            <a href="#">
+                <p>Contact Us</p>
+
+            </a>
+            <a href="#">
+                <p>Careers</p>
+
+            </a>
+            <a href="#">
+                <p>Investor Relations</p>
+
+            </a>
+            <a href="#">
+                <p>Sell Your Products</p>
+
+            </a>
+            <a href="#">
+                <p>Supply Chain Transparency</p>
+
+            </a>
+        </div>
+
+        <div>
+            <a href="#"><h3>MORE WAYS TO SHOP</h3></a>
+            <a href="#"><p>Tips & Ideas</p></a>
+            <a href="#"><p>Deals</p></a>
+            <a href="#"><p>Clearance</p></a>
+            <a href="#"><p>New Arrivals</p></a>
+        </div>
+    </div>
+
+<div class="feet">
+    <div class="footer-nav">
+        <div>
+            <p>© Copyright 2022, Overstock.com®, Inc.</p>
+            <p>799 Coliseum Way Midvale, UT 84047 | 1-800-843-2446</p>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">*Promotion Terms</a></li>
+                <li><a href="#"><span>Ship to:<img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt=""></span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</Footer>
+</body>
+</html>
