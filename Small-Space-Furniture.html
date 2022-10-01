@@ -338,6 +338,48 @@
             height: 20px;
         }
 
+        #container{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height: auto;
+            gap: 60px 20px;
+            margin-top: 60px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #container>div>h3{
+            font-family:  Helvetica, sans-serif;
+            padding: 3%;
+            text-align: center;
+        }
+        #container>div>p{
+            margin: auto;
+            text-align: center;
+        }
+        #container>div>button{
+            margin: auto;
+            margin-top: 4px;
+            height: auto;
+            width: 40%;
+            border-radius: 20px;
+            padding:5px 5px;
+            background-color: #27865f;
+            cursor: pointer;
+        }
+
+        .product-heading{
+            width: 25%;
+            margin: auto;
+            margin-top: 160px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 40px;
+            border-bottom: 2px solid #27865f;
+        }
     </style>
 </head>
 <body>
@@ -431,37 +473,9 @@
 </div>
     
     </div>
-    <!-- sign up   -->
-    <div class="AC">
-        <div>
-            <form id="signup">
-                <h2>Create Account</h2>
-                <label for="" >Full name</label><br>
-                <input id="name" type="text" placeholder="Enter your full name" >
-                <br> 
-                <label for="" i>Email</label><br>
-                <input id="email" type="text" placeholder="Enter email" >
-                <br>
-                <label for="" >Password</label><br>
-                <input id="pass" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#0272a2; color: #fff;" type="submit" value="SIGN UP">
-            </form>
-        </div>
-        <div>
-            <form id="login">
-                <h2>Sign in</h2>
-                <label for="">Email</label><br>
-                <input id="logemail" type="text" placeholder="Enter email" >
-                <br>
-                <label for="">Password</label><br>
-                <input id="logpassword" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#27865f; color: #fff;" type="submit" value="LOG IN">
-        </form>
-        </div>
-    </div>
     
+    <h1 class="product-heading">Small Space Furniture</h1>
+    <div id="container"></div>
     <!-- <footer></footer> -->
     <Footer>
         <div class="Footer">
@@ -567,41 +581,208 @@
     </Footer>
 </body>
 </html>
+
 <script>
-let sign_form=document.querySelector("#signup");
-    sign_form.addEventListener("submit",myfunc);
+    let smallData = [
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Small_Sectional_Sofas.jpg",
+    name: "Copper Grove Perreux Linen Reversible Sleeper Sectional Sofa",
+    price: "63220",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Armless_Chairs.jpg",
+    name: "Kassi Contemporary Slipper Accent Chair by Christopher Knight Home",
+    price: "6570",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Daybeds.jpg",
+    name:" Chester Tufted Twin Daybed with Trundle ",
+    price: "54018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/shop_by_room_catg_small_spaces_ottomans.jpg",
+        name: "Copper Grove Dorado Square Blue Storage Ottoman",
+        price: "8505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Small_Sectional_Sofas.jpg",
+        name: "Lift Top Coffee Table with Hidden Storage Compartment and Shelf",
+        price: "13255",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Accent_tables.jpg",
+        name: "Kate and Laurel Celia Round Foldable Metal Accent Table",
+        price: "5305",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Small_Sectional_Sofas.jpg",
+    name: "Copper Grove Perreux Linen Reversible Sleeper Sectional Sofa",
+    price: "63220",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Armless_Chairs.jpg",
+    name: "Kassi Contemporary Slipper Accent Chair by Christopher Knight Home",
+    price: "6570",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Daybeds.jpg",
+    name:" Chester Tufted Twin Daybed with Trundle ",
+    price: "54018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/shop_by_room_catg_small_spaces_ottomans.jpg",
+        name: "Copper Grove Dorado Square Blue Storage Ottoman",
+        price: "8505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Small_Sectional_Sofas.jpg",
+        name: "Lift Top Coffee Table with Hidden Storage Compartment and Shelf",
+        price: "13255",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Accent_tables.jpg",
+        name: "Kate and Laurel Celia Round Foldable Metal Accent Table",
+        price: "5305",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Small_Sectional_Sofas.jpg",
+    name: "Copper Grove Perreux Linen Reversible Sleeper Sectional Sofa",
+    price: "63220",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Armless_Chairs.jpg",
+    name: "Kassi Contemporary Slipper Accent Chair by Christopher Knight Home",
+    price: "6570",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Daybeds.jpg",
+    name:" Chester Tufted Twin Daybed with Trundle ",
+    price: "54018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/shop_by_room_catg_small_spaces_ottomans.jpg",
+        name: "Copper Grove Dorado Square Blue Storage Ottoman",
+        price: "8505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Small_Sectional_Sofas.jpg",
+        name: "Lift Top Coffee Table with Hidden Storage Compartment and Shelf",
+        price: "13255",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Accent_tables.jpg",
+        name: "Kate and Laurel Celia Round Foldable Metal Accent Table",
+        price: "5305",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Small_Sectional_Sofas.jpg",
+    name: "Copper Grove Perreux Linen Reversible Sleeper Sectional Sofa",
+    price: "63220",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Armless_Chairs.jpg",
+    name: "Kassi Contemporary Slipper Accent Chair by Christopher Knight Home",
+    price: "6570",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Daybeds.jpg",
+    name:" Chester Tufted Twin Daybed with Trundle ",
+    price: "54018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/shop_by_room_catg_small_spaces_ottomans.jpg",
+        name: "Copper Grove Dorado Square Blue Storage Ottoman",
+        price: "8505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Small_Sectional_Sofas.jpg",
+        name: "Lift Top Coffee Table with Hidden Storage Compartment and Shelf",
+        price: "13255",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Accent_tables.jpg",
+        name: "Kate and Laurel Celia Round Foldable Metal Accent Table",
+        price: "5305",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Small_Sectional_Sofas.jpg",
+    name: "Copper Grove Perreux Linen Reversible Sleeper Sectional Sofa",
+    price: "63220",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Armless_Chairs.jpg",
+    name: "Kassi Contemporary Slipper Accent Chair by Christopher Knight Home",
+    price: "6570",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Daybeds.jpg",
+    name:" Chester Tufted Twin Daybed with Trundle ",
+    price: "54018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/shop_by_room_catg_small_spaces_ottomans.jpg",
+        name: "Copper Grove Dorado Square Blue Storage Ottoman",
+        price: "8505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Small_Sectional_Sofas.jpg",
+        name: "Lift Top Coffee Table with Hidden Storage Compartment and Shelf",
+        price: "13255",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/img/mxc/052319_smallspaces-Accent_tables.jpg",
+        name: "Kate and Laurel Celia Round Foldable Metal Accent Table",
+        price: "5305",
+    },
 
-    function myfunc(event){    
-    event.preventDefault();
-    let name=document.querySelector("#name").value;
-    localStorage.setItem("name",name);
 
-    let mail=document.querySelector("#email").value;
-    localStorage.setItem("email",mail);
-
-    let pass=document.querySelector("#pass").value;
-    localStorage.setItem("password",pass);
-
-        alert("SignUp Successful");
-}
-
-    let login_form=document.querySelector("#login");
-login_form.addEventListener("submit",logg);
-
-function logg(event){
-    event.preventDefault();
     
-    let mail=document.querySelector("#logemail").value;
-    let password=document.querySelector("#logpassword").value;
-     // console.log(password,mail);
+    ];
+    let cartarr=JSON.parse(localStorage.getItem("cart_items")) || [];
 
-    let lsemail=localStorage.getItem("email")
-    let lspass=localStorage.getItem("password")
+    smallData.forEach(function(el){
 
-    if(lsemail===mail && lspass===password){
-        alert("Login Successful");
-    }else{
-        alert("Wrong Details");
+        let card=document.createElement("div");
+        // creating img 
+        let Product_img=document.createElement("img");
+        Product_img.src=el.image_url;
+        // creating_title
+        let title=document.createElement("h3");
+        title.innerText=el.name;
+        // creating price 
+        let price=document.createElement("p")
+        price.style.fontSize="17px";
+        price.style.fontFamily="Helvetica, sans-serif";
+        price.innerText="price: "+el.price+" /-";
+        // creating button 
+        let btn=document.createElement("button");
+        btn.innerText="Add to Cart";
+        btn.style.backgroundColor="#27865f";
+        btn.addEventListener("click",function (){
+            addToCart(el);
+        });
+        card.append(Product_img,title,price, btn);
+        
+        document.querySelector("#container").append(card);
+    });
+    
+    function addToCart(el){
+    cartarr.push(el);
+    localStorage.setItem("cart_items", JSON.stringify(cartarr));
     }
-}
 </script>

@@ -338,6 +338,48 @@
             height: 20px;
         }
 
+        #container{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height: auto;
+            gap: 60px 20px;
+            margin-top: 60px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #container>div>h3{
+            font-family:  Helvetica, sans-serif;
+            padding: 3%;
+            text-align: center;
+        }
+        #container>div>p{
+            margin: auto;
+            text-align: center;
+        }
+        #container>div>button{
+            margin: auto;
+            margin-top: 4px;
+            height: auto;
+            width: 40%;
+            border-radius: 20px;
+            padding:5px 5px;
+            background-color: #27865f;
+            cursor: pointer;
+        }
+
+        .product-heading{
+            width: 25%;
+            margin: auto;
+            margin-top: 160px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 40px;
+            border-bottom: 2px solid #27865f;
+        }
     </style>
 </head>
 <body>
@@ -413,15 +455,15 @@
             <ul>
                 <li><a href="furniture.html">Furniture</a></li>
                 <li><a href="#">Rugs</a></li>
-                <li><a href="Recreation-Room.html">Decor</a></li>
-                <li><a href="Bedroom-Furniture.html">Bedding</a></li>
-                <li><a href="Dining-Room-Furniture.html">Home Improvement</a></li>
-                <li><a href="Kitchen-Furniture.html">Kitchen</a></li>
+                <li><a href="#">Decor</a></li>
+                <li><a href="#">Bedding</a></li>
+                <li><a href="#">Home Improvement</a></li>
+                <li><a href="#">Kitchen</a></li>
                 <li><a href="#">Outdoor</a></li>
                 <li><a href="#">Lightning</a></li>
-                <li><a href="Kids-&-Toddler-Furniture.html">Kids Baby</a></li>
-                <li><a href="Home-Office-Furniture.html">More</a></li>
-                <li><a href="Small-Space-Furniture.html">Ideas</a></li>
+                <li><a href="#">Kids Baby</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">Ideas</a></li>
                 <li><a style="color: red;" href="#">Sales & Deals</a></li>
             </ul>
         
@@ -431,37 +473,9 @@
 </div>
     
     </div>
-    <!-- sign up   -->
-    <div class="AC">
-        <div>
-            <form id="signup">
-                <h2>Create Account</h2>
-                <label for="" >Full name</label><br>
-                <input id="name" type="text" placeholder="Enter your full name" >
-                <br> 
-                <label for="" i>Email</label><br>
-                <input id="email" type="text" placeholder="Enter email" >
-                <br>
-                <label for="" >Password</label><br>
-                <input id="pass" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#0272a2; color: #fff;" type="submit" value="SIGN UP">
-            </form>
-        </div>
-        <div>
-            <form id="login">
-                <h2>Sign in</h2>
-                <label for="">Email</label><br>
-                <input id="logemail" type="text" placeholder="Enter email" >
-                <br>
-                <label for="">Password</label><br>
-                <input id="logpassword" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#27865f; color: #fff;" type="submit" value="LOG IN">
-        </form>
-        </div>
-    </div>
     
+    <h1 class="product-heading">Bathroom Furniture</h1>
+    <div id="container"></div>
     <!-- <footer></footer> -->
     <Footer>
         <div class="Footer">
@@ -567,41 +581,146 @@
     </Footer>
 </body>
 </html>
+
 <script>
-let sign_form=document.querySelector("#signup");
-    sign_form.addEventListener("submit",myfunc);
+    let bedroomData = [
 
-    function myfunc(event){    
-    event.preventDefault();
-    let name=document.querySelector("#name").value;
-    localStorage.setItem("name",name);
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/21035b839eb6dab7018220374621bf77673b3287/Brookside-Vertical-Bar-Traditional-Metal-Headboard.jpg?imwidth=480&impolicy=medium",
+      name: "Brookside Ada Vertical Bar Traditional Metal Headboard",
+      price: "5820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f1bc87967903fb39c9604b85185c59e95d9783a4/Porch-%26-Den-Madrid-4-Drawer-Shoe-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name: "Porch & Den Madrid 4-Drawer Shoe Cabinet",
+      price: "22270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6a126721e562d6cd9279e9d431e3a0c9985ad8cc/LUCID-Comfort-Collection-10-inch-Luxury-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+      name: "LUCID Comfort Collection 10-inch Luxury Gel Memory Foam Mattress",
+      price: "21618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/1a9e1dc549b11c36bcebb41fa38aa87ce80be17d/Priage-by-ZINUS-Mid-Century-Wood-Platform-Bed-Frame.jpg?imwidth=480&impolicy=medium",
+        name: "Priage by ZINUS Mid Century Wood Platform Bed Frame",
+        price: "24505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/479b70c5b0f457c0154b39bf44843c8ea052fa96/Grain-Wood-Furniture-Shaker-3-door-Solid-Wood-Armoire.jpg?imwidth=480&impolicy=medium",
+        name: "Grain Wood Furniture Shaker Wood 3-door Armoire - 60x72x22",
+        price: "69505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/87ad69d444221d16e0f066302a96d6a3b78be9b4/alazyhome-Platform-Metal-Bed-Frame-with-Headboard%2C-Iron-Slat-Support.jpg?imwidth=480&impolicy=medium",
+        name: "Alazyhome Platform Metal Bed Frame with Headboard, Iron Slat Support",
+        price: "15505",
+    },
 
-    let mail=document.querySelector("#email").value;
-    localStorage.setItem("email",mail);
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/21035b839eb6dab7018220374621bf77673b3287/Brookside-Vertical-Bar-Traditional-Metal-Headboard.jpg?imwidth=480&impolicy=medium",
+      name: "Brookside Ada Vertical Bar Traditional Metal Headboard",
+      price: "5820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f1bc87967903fb39c9604b85185c59e95d9783a4/Porch-%26-Den-Madrid-4-Drawer-Shoe-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name: "Porch & Den Madrid 4-Drawer Shoe Cabinet",
+      price: "22270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6a126721e562d6cd9279e9d431e3a0c9985ad8cc/LUCID-Comfort-Collection-10-inch-Luxury-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+      name: "LUCID Comfort Collection 10-inch Luxury Gel Memory Foam Mattress",
+      price: "21618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/1a9e1dc549b11c36bcebb41fa38aa87ce80be17d/Priage-by-ZINUS-Mid-Century-Wood-Platform-Bed-Frame.jpg?imwidth=480&impolicy=medium",
+        name: "Priage by ZINUS Mid Century Wood Platform Bed Frame",
+        price: "24505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/479b70c5b0f457c0154b39bf44843c8ea052fa96/Grain-Wood-Furniture-Shaker-3-door-Solid-Wood-Armoire.jpg?imwidth=480&impolicy=medium",
+        name: "Grain Wood Furniture Shaker Wood 3-door Armoire - 60x72x22",
+        price: "69505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/87ad69d444221d16e0f066302a96d6a3b78be9b4/alazyhome-Platform-Metal-Bed-Frame-with-Headboard%2C-Iron-Slat-Support.jpg?imwidth=480&impolicy=medium",
+        name: "Alazyhome Platform Metal Bed Frame with Headboard, Iron Slat Support",
+        price: "15505",
+    },
 
-    let pass=document.querySelector("#pass").value;
-    localStorage.setItem("password",pass);
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/21035b839eb6dab7018220374621bf77673b3287/Brookside-Vertical-Bar-Traditional-Metal-Headboard.jpg?imwidth=480&impolicy=medium",
+      name: "Brookside Ada Vertical Bar Traditional Metal Headboard",
+      price: "5820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f1bc87967903fb39c9604b85185c59e95d9783a4/Porch-%26-Den-Madrid-4-Drawer-Shoe-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name: "Porch & Den Madrid 4-Drawer Shoe Cabinet",
+      price: "22270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6a126721e562d6cd9279e9d431e3a0c9985ad8cc/LUCID-Comfort-Collection-10-inch-Luxury-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+      name: "LUCID Comfort Collection 10-inch Luxury Gel Memory Foam Mattress",
+      price: "21618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/1a9e1dc549b11c36bcebb41fa38aa87ce80be17d/Priage-by-ZINUS-Mid-Century-Wood-Platform-Bed-Frame.jpg?imwidth=480&impolicy=medium",
+        name: "Priage by ZINUS Mid Century Wood Platform Bed Frame",
+        price: "24505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/479b70c5b0f457c0154b39bf44843c8ea052fa96/Grain-Wood-Furniture-Shaker-3-door-Solid-Wood-Armoire.jpg?imwidth=480&impolicy=medium",
+        name: "Grain Wood Furniture Shaker Wood 3-door Armoire - 60x72x22",
+        price: "69505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/87ad69d444221d16e0f066302a96d6a3b78be9b4/alazyhome-Platform-Metal-Bed-Frame-with-Headboard%2C-Iron-Slat-Support.jpg?imwidth=480&impolicy=medium",
+        name: "Alazyhome Platform Metal Bed Frame with Headboard, Iron Slat Support",
+        price: "15505",
+    },
 
-        alert("SignUp Successful");
-}
-
-    let login_form=document.querySelector("#login");
-login_form.addEventListener("submit",logg);
-
-function logg(event){
-    event.preventDefault();
     
-    let mail=document.querySelector("#logemail").value;
-    let password=document.querySelector("#logpassword").value;
-     // console.log(password,mail);
+    
+   
+      ];
+    let cartarr=JSON.parse(localStorage.getItem("cart_items")) || [];
 
-    let lsemail=localStorage.getItem("email")
-    let lspass=localStorage.getItem("password")
+    bedroomData.forEach(function(el){
 
-    if(lsemail===mail && lspass===password){
-        alert("Login Successful");
-    }else{
-        alert("Wrong Details");
+        let card=document.createElement("div");
+        // creating img 
+        let Product_img=document.createElement("img");
+        Product_img.src=el.image_url;
+        // creating_title
+        let title=document.createElement("h3");
+        title.innerText=el.name;
+        // creating price 
+        let price=document.createElement("p")
+        price.style.fontSize="17px";
+        price.style.fontFamily="Helvetica, sans-serif";
+        price.innerText="price: "+el.price+" /-";
+        // creating button 
+        let btn=document.createElement("button");
+        btn.innerText="Add to Cart";
+        btn.style.backgroundColor="#27865f";
+        btn.addEventListener("click",function (){
+            addToCart(el);
+        });
+        card.append(Product_img,title,price, btn);
+        
+        document.querySelector("#container").append(card);
+    });
+    
+    function addToCart(el){
+    cartarr.push(el);
+    localStorage.setItem("cart_items", JSON.stringify(cartarr));
     }
-}
 </script>

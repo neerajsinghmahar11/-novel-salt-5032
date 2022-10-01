@@ -338,6 +338,48 @@
             height: 20px;
         }
 
+        #container{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height: auto;
+            gap: 60px 20px;
+            margin-top: 60px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #container>div>h3{
+            font-family:  Helvetica, sans-serif;
+            padding: 3%;
+            text-align: center;
+        }
+        #container>div>p{
+            margin: auto;
+            text-align: center;
+        }
+        #container>div>button{
+            margin: auto;
+            margin-top: 4px;
+            height: auto;
+            width: 40%;
+            border-radius: 20px;
+            padding:5px 5px;
+            background-color: #27865f;
+            cursor: pointer;
+        }
+
+        .product-heading{
+            width: 25%;
+            margin: auto;
+            margin-top: 160px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 40px;
+            border-bottom: 2px solid #27865f;
+        }
     </style>
 </head>
 <body>
@@ -365,7 +407,7 @@
             <button type="submit"><i class="fa fa-search" ></i></button>
         </div>
         <div>
-            <a href="signup.html">
+            <a href="#">
                 <div class="Acc">
                     
                     <div>
@@ -431,42 +473,14 @@
 </div>
     
     </div>
-    <!-- sign up   -->
-    <div class="AC">
-        <div>
-            <form id="signup">
-                <h2>Create Account</h2>
-                <label for="" >Full name</label><br>
-                <input id="name" type="text" placeholder="Enter your full name" >
-                <br> 
-                <label for="" i>Email</label><br>
-                <input id="email" type="text" placeholder="Enter email" >
-                <br>
-                <label for="" >Password</label><br>
-                <input id="pass" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#0272a2; color: #fff;" type="submit" value="SIGN UP">
-            </form>
-        </div>
-        <div>
-            <form id="login">
-                <h2>Sign in</h2>
-                <label for="">Email</label><br>
-                <input id="logemail" type="text" placeholder="Enter email" >
-                <br>
-                <label for="">Password</label><br>
-                <input id="logpassword" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#27865f; color: #fff;" type="submit" value="LOG IN">
-        </form>
-        </div>
-    </div>
     
+    <h1 class="product-heading">mattresses Furniture</h1>
+    <div id="container"></div>
     <!-- <footer></footer> -->
     <Footer>
         <div class="Footer">
             <div>
-                <a href="#">
+                <a href="signup.html">
                     <h3>MY ACCOUNT</h3>
                 </a>
                 <a href="#">
@@ -567,41 +581,175 @@
     </Footer>
 </body>
 </html>
+
 <script>
-let sign_form=document.querySelector("#signup");
-    sign_form.addEventListener("submit",myfunc);
+    let patioData = [
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/ba10a84f26e6766cfb19afb7f7563cc1eadfca87/18-x-18-Sunbrella-Seat-Pad-2-Pack.jpg?imwidth=480&impolicy=medium",
+    name: "Sunbrella Solid fabric 2 pack 18 in. Square seat pad with 21 options",
+    price: "5220",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/9af9e0c0ff8225a1b95d62c1c5718b174eb7284c/Laguna-Poly-Outdoor-Folding-Adirondack-Chair.jpg?imwidth=480&impolicy=medium",
+    name: "Laguna Poly Outdoor Folding Adirondack Chair",
+    price: "13270",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/606863fcaed6dcaa1a6dfe0025cffd93afbbc272/POLYWOOD-Estate-3-Piece-Rocking-Chair-Set-with-Long-Island-18%22-Side-Table.jpg?imwidth=480&impolicy=medium",
+    name:" POLYWOOD Estate 3-Piece Rocking Chair Set with Long Island ",
+    price: "42018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/7980698516eb64a66826ae9e097ed25b6599abb7/Laguna-All-Weather-Outdoor-Patio-Foldable-Ottoman.jpg?imwidth=480&impolicy=medium",
+        name: "Laguna All-Weather Outdoor Patio Foldable Ottoman",
+        price: "4505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/4d9b750822933b7e58ed1519b3594f60c51d61b6/Haven-Way-Outdoor-Seat-%26-Back-Cushion-Set.jpg?imwidth=480&impolicy=medium",
+        name: "Haven Way Outdoor Seat & Back Cushion Set",
+        price: "6255",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/13831595/Long-Island-18-inch-Side-Table-2f52f755-ecea-42a8-9bad-395b3b3134fd_600.jpg?imwidth=480&impolicy=medium",
+        name: "POLYWOOD® Long Island 18-inch Side Table",
+        price: "6305",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/ba10a84f26e6766cfb19afb7f7563cc1eadfca87/18-x-18-Sunbrella-Seat-Pad-2-Pack.jpg?imwidth=480&impolicy=medium",
+    name: "Sunbrella Solid fabric 2 pack 18 in. Square seat pad with 21 options",
+    price: "5220",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/9af9e0c0ff8225a1b95d62c1c5718b174eb7284c/Laguna-Poly-Outdoor-Folding-Adirondack-Chair.jpg?imwidth=480&impolicy=medium",
+    name: "Laguna Poly Outdoor Folding Adirondack Chair",
+    price: "13270",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/606863fcaed6dcaa1a6dfe0025cffd93afbbc272/POLYWOOD-Estate-3-Piece-Rocking-Chair-Set-with-Long-Island-18%22-Side-Table.jpg?imwidth=480&impolicy=medium",
+    name:" POLYWOOD Estate 3-Piece Rocking Chair Set with Long Island ",
+    price: "42018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/7980698516eb64a66826ae9e097ed25b6599abb7/Laguna-All-Weather-Outdoor-Patio-Foldable-Ottoman.jpg?imwidth=480&impolicy=medium",
+        name: "Laguna All-Weather Outdoor Patio Foldable Ottoman",
+        price: "4505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/4d9b750822933b7e58ed1519b3594f60c51d61b6/Haven-Way-Outdoor-Seat-%26-Back-Cushion-Set.jpg?imwidth=480&impolicy=medium",
+        name: "Haven Way Outdoor Seat & Back Cushion Set",
+        price: "6255",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/13831595/Long-Island-18-inch-Side-Table-2f52f755-ecea-42a8-9bad-395b3b3134fd_600.jpg?imwidth=480&impolicy=medium",
+        name: "POLYWOOD® Long Island 18-inch Side Table",
+        price: "6305",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/ba10a84f26e6766cfb19afb7f7563cc1eadfca87/18-x-18-Sunbrella-Seat-Pad-2-Pack.jpg?imwidth=480&impolicy=medium",
+    name: "Sunbrella Solid fabric 2 pack 18 in. Square seat pad with 21 options",
+    price: "5220",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/9af9e0c0ff8225a1b95d62c1c5718b174eb7284c/Laguna-Poly-Outdoor-Folding-Adirondack-Chair.jpg?imwidth=480&impolicy=medium",
+    name: "Laguna Poly Outdoor Folding Adirondack Chair",
+    price: "13270",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/606863fcaed6dcaa1a6dfe0025cffd93afbbc272/POLYWOOD-Estate-3-Piece-Rocking-Chair-Set-with-Long-Island-18%22-Side-Table.jpg?imwidth=480&impolicy=medium",
+    name:" POLYWOOD Estate 3-Piece Rocking Chair Set with Long Island ",
+    price: "42018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/7980698516eb64a66826ae9e097ed25b6599abb7/Laguna-All-Weather-Outdoor-Patio-Foldable-Ottoman.jpg?imwidth=480&impolicy=medium",
+        name: "Laguna All-Weather Outdoor Patio Foldable Ottoman",
+        price: "4505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/4d9b750822933b7e58ed1519b3594f60c51d61b6/Haven-Way-Outdoor-Seat-%26-Back-Cushion-Set.jpg?imwidth=480&impolicy=medium",
+        name: "Haven Way Outdoor Seat & Back Cushion Set",
+        price: "6255",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/13831595/Long-Island-18-inch-Side-Table-2f52f755-ecea-42a8-9bad-395b3b3134fd_600.jpg?imwidth=480&impolicy=medium",
+        name: "POLYWOOD® Long Island 18-inch Side Table",
+        price: "6305",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/ba10a84f26e6766cfb19afb7f7563cc1eadfca87/18-x-18-Sunbrella-Seat-Pad-2-Pack.jpg?imwidth=480&impolicy=medium",
+    name: "Sunbrella Solid fabric 2 pack 18 in. Square seat pad with 21 options",
+    price: "5220",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/9af9e0c0ff8225a1b95d62c1c5718b174eb7284c/Laguna-Poly-Outdoor-Folding-Adirondack-Chair.jpg?imwidth=480&impolicy=medium",
+    name: "Laguna Poly Outdoor Folding Adirondack Chair",
+    price: "13270",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/606863fcaed6dcaa1a6dfe0025cffd93afbbc272/POLYWOOD-Estate-3-Piece-Rocking-Chair-Set-with-Long-Island-18%22-Side-Table.jpg?imwidth=480&impolicy=medium",
+    name:" POLYWOOD Estate 3-Piece Rocking Chair Set with Long Island ",
+    price: "42018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/7980698516eb64a66826ae9e097ed25b6599abb7/Laguna-All-Weather-Outdoor-Patio-Foldable-Ottoman.jpg?imwidth=480&impolicy=medium",
+        name: "Laguna All-Weather Outdoor Patio Foldable Ottoman",
+        price: "4505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/4d9b750822933b7e58ed1519b3594f60c51d61b6/Haven-Way-Outdoor-Seat-%26-Back-Cushion-Set.jpg?imwidth=480&impolicy=medium",
+        name: "Haven Way Outdoor Seat & Back Cushion Set",
+        price: "6255",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/13831595/Long-Island-18-inch-Side-Table-2f52f755-ecea-42a8-9bad-395b3b3134fd_600.jpg?imwidth=480&impolicy=medium",
+        name: "POLYWOOD® Long Island 18-inch Side Table",
+        price: "6305",
+    },
+  
 
-    function myfunc(event){    
-    event.preventDefault();
-    let name=document.querySelector("#name").value;
-    localStorage.setItem("name",name);
-
-    let mail=document.querySelector("#email").value;
-    localStorage.setItem("email",mail);
-
-    let pass=document.querySelector("#pass").value;
-    localStorage.setItem("password",pass);
-
-        alert("SignUp Successful");
-}
-
-    let login_form=document.querySelector("#login");
-login_form.addEventListener("submit",logg);
-
-function logg(event){
-    event.preventDefault();
     
-    let mail=document.querySelector("#logemail").value;
-    let password=document.querySelector("#logpassword").value;
-     // console.log(password,mail);
+    ];
+    let cartarr=JSON.parse(localStorage.getItem("cart_items")) || [];
 
-    let lsemail=localStorage.getItem("email")
-    let lspass=localStorage.getItem("password")
+    patioData.forEach(function(el){
 
-    if(lsemail===mail && lspass===password){
-        alert("Login Successful");
-    }else{
-        alert("Wrong Details");
+        let card=document.createElement("div");
+        // creating img 
+        let Product_img=document.createElement("img");
+        Product_img.src=el.image_url;
+        // creating_title
+        let title=document.createElement("h3");
+        title.innerText=el.name;
+        // creating price 
+        let price=document.createElement("p")
+        price.style.fontSize="17px";
+        price.style.fontFamily="Helvetica, sans-serif";
+        price.innerText="price: "+el.price+" /-";
+        // creating button 
+        let btn=document.createElement("button");
+        btn.innerText="Add to Cart";
+        btn.style.backgroundColor="#27865f";
+        btn.addEventListener("click",function (){
+            addToCart(el);
+        });
+        card.append(Product_img,title,price, btn);
+        
+        document.querySelector("#container").append(card);
+    });
+    
+    function addToCart(el){
+    cartarr.push(el);
+    localStorage.setItem("cart_items", JSON.stringify(cartarr));
     }
-}
 </script>

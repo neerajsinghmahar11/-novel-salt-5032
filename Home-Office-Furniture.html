@@ -338,6 +338,48 @@
             height: 20px;
         }
 
+        #container{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height: auto;
+            gap: 60px 20px;
+            margin-top: 60px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #container>div>h3{
+            font-family:  Helvetica, sans-serif;
+            padding: 3%;
+            text-align: center;
+        }
+        #container>div>p{
+            margin: auto;
+            text-align: center;
+        }
+        #container>div>button{
+            margin: auto;
+            margin-top: 4px;
+            height: auto;
+            width: 40%;
+            border-radius: 20px;
+            padding:5px 5px;
+            background-color: #27865f;
+            cursor: pointer;
+        }
+
+        .product-heading{
+            width: 25%;
+            margin: auto;
+            margin-top: 160px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 40px;
+            border-bottom: 2px solid #27865f;
+        }
     </style>
 </head>
 <body>
@@ -431,37 +473,9 @@
 </div>
     
     </div>
-    <!-- sign up   -->
-    <div class="AC">
-        <div>
-            <form id="signup">
-                <h2>Create Account</h2>
-                <label for="" >Full name</label><br>
-                <input id="name" type="text" placeholder="Enter your full name" >
-                <br> 
-                <label for="" i>Email</label><br>
-                <input id="email" type="text" placeholder="Enter email" >
-                <br>
-                <label for="" >Password</label><br>
-                <input id="pass" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#0272a2; color: #fff;" type="submit" value="SIGN UP">
-            </form>
-        </div>
-        <div>
-            <form id="login">
-                <h2>Sign in</h2>
-                <label for="">Email</label><br>
-                <input id="logemail" type="text" placeholder="Enter email" >
-                <br>
-                <label for="">Password</label><br>
-                <input id="logpassword" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#27865f; color: #fff;" type="submit" value="LOG IN">
-        </form>
-        </div>
-    </div>
     
+    <h1 class="product-heading">Home & Office Furniture</h1>
+    <div id="container"></div>
     <!-- <footer></footer> -->
     <Footer>
         <div class="Footer">
@@ -567,41 +581,145 @@
     </Footer>
 </body>
 </html>
+
 <script>
-let sign_form=document.querySelector("#signup");
-    sign_form.addEventListener("submit",myfunc);
+    let HomeData = [
 
-    function myfunc(event){    
-    event.preventDefault();
-    let name=document.querySelector("#name").value;
-    localStorage.setItem("name",name);
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/cd44208207f18ae17a7376e5a03ab73d5b290090/Homall-Black-Business-Office-Chair-High-Back-Exectuive-Managerial-Deck-Chair-Adjustable.jpg?imwidth=480&impolicy=medium",
+      name: "Homall Office Desk Chair High Back Executive Ergonomic Computer Chair",
+      price: "11820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/dddc44cdd5ecd7ceee9a5faad05961da8d741921/Key-West-Tall-Storage-Cabinet-with-Doors-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+      name: "Key West Tall Storage Cabinet with Doors by Bush Furniture",
+      price: "22270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/72a0973c1bcc3e3a9192db936959ba7edd90a3e5/Salinas-Computer-Desk-with-Storage-and-Keyboard-Tray-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+      name: "Salinas Computer Desk with Storage and Keyboard Tray by Bush Furniture",
+      price: "11618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/40f0b2795048b38b173c34d402fab3cbd78bd3f2/Salinas-60W-L-Shaped-Writing-Desk-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+        name: "Salinas 60W L Shaped Writing Desk by Bush Furniture",
+        price: "10205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/38dabc6b770a4c36b5f3f363aa92b52a76d136af/Key-West-54W-Corner-Computer-Desk-with-Storage-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+        name: "Key West 54W Corner Computer Desk with Storage by Bush Furniture",
+        price: "10505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/63cbe36430fb086341b8b1c1bfb4a2353405cefa/Salinas-L-shaped-Storage-Desk-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+        name: "Salinas L-shaped Storage Desk by Bush Furniture",
+        price: "24505",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/cd44208207f18ae17a7376e5a03ab73d5b290090/Homall-Black-Business-Office-Chair-High-Back-Exectuive-Managerial-Deck-Chair-Adjustable.jpg?imwidth=480&impolicy=medium",
+      name: "Homall Office Desk Chair High Back Executive Ergonomic Computer Chair",
+      price: "11820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/dddc44cdd5ecd7ceee9a5faad05961da8d741921/Key-West-Tall-Storage-Cabinet-with-Doors-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+      name: "Key West Tall Storage Cabinet with Doors by Bush Furniture",
+      price: "22270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/72a0973c1bcc3e3a9192db936959ba7edd90a3e5/Salinas-Computer-Desk-with-Storage-and-Keyboard-Tray-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+      name: "Salinas Computer Desk with Storage and Keyboard Tray by Bush Furniture",
+      price: "11618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/40f0b2795048b38b173c34d402fab3cbd78bd3f2/Salinas-60W-L-Shaped-Writing-Desk-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+        name: "Salinas 60W L Shaped Writing Desk by Bush Furniture",
+        price: "10205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/38dabc6b770a4c36b5f3f363aa92b52a76d136af/Key-West-54W-Corner-Computer-Desk-with-Storage-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+        name: "Key West 54W Corner Computer Desk with Storage by Bush Furniture",
+        price: "10505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/63cbe36430fb086341b8b1c1bfb4a2353405cefa/Salinas-L-shaped-Storage-Desk-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+        name: "Salinas L-shaped Storage Desk by Bush Furniture",
+        price: "24505",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/cd44208207f18ae17a7376e5a03ab73d5b290090/Homall-Black-Business-Office-Chair-High-Back-Exectuive-Managerial-Deck-Chair-Adjustable.jpg?imwidth=480&impolicy=medium",
+      name: "Homall Office Desk Chair High Back Executive Ergonomic Computer Chair",
+      price: "11820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/dddc44cdd5ecd7ceee9a5faad05961da8d741921/Key-West-Tall-Storage-Cabinet-with-Doors-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+      name: "Key West Tall Storage Cabinet with Doors by Bush Furniture",
+      price: "22270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/72a0973c1bcc3e3a9192db936959ba7edd90a3e5/Salinas-Computer-Desk-with-Storage-and-Keyboard-Tray-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+      name: "Salinas Computer Desk with Storage and Keyboard Tray by Bush Furniture",
+      price: "11618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/40f0b2795048b38b173c34d402fab3cbd78bd3f2/Salinas-60W-L-Shaped-Writing-Desk-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+        name: "Salinas 60W L Shaped Writing Desk by Bush Furniture",
+        price: "10205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/38dabc6b770a4c36b5f3f363aa92b52a76d136af/Key-West-54W-Corner-Computer-Desk-with-Storage-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+        name: "Key West 54W Corner Computer Desk with Storage by Bush Furniture",
+        price: "10505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/63cbe36430fb086341b8b1c1bfb4a2353405cefa/Salinas-L-shaped-Storage-Desk-by-Bush-Furniture.jpg?imwidth=480&impolicy=medium",
+        name: "Salinas L-shaped Storage Desk by Bush Furniture",
+        price: "24505",
+    },
 
-    let mail=document.querySelector("#email").value;
-    localStorage.setItem("email",mail);
 
-    let pass=document.querySelector("#pass").value;
-    localStorage.setItem("password",pass);
-
-        alert("SignUp Successful");
-}
-
-    let login_form=document.querySelector("#login");
-login_form.addEventListener("submit",logg);
-
-function logg(event){
-    event.preventDefault();
     
-    let mail=document.querySelector("#logemail").value;
-    let password=document.querySelector("#logpassword").value;
-     // console.log(password,mail);
+    
+   
+      ];
+    let cartarr=JSON.parse(localStorage.getItem("cart_items")) || [];
 
-    let lsemail=localStorage.getItem("email")
-    let lspass=localStorage.getItem("password")
+    HomeData.forEach(function(el){
 
-    if(lsemail===mail && lspass===password){
-        alert("Login Successful");
-    }else{
-        alert("Wrong Details");
+        let card=document.createElement("div");
+        // creating img 
+        let Product_img=document.createElement("img");
+        Product_img.src=el.image_url;
+        // creating_title
+        let title=document.createElement("h3");
+        title.innerText=el.name;
+        // creating price 
+        let price=document.createElement("p")
+        price.style.fontSize="17px";
+        price.style.fontFamily="Helvetica, sans-serif";
+        price.innerText="price: "+el.price+" /-";
+        // creating button 
+        let btn=document.createElement("button");
+        btn.innerText="Add to Cart";
+        btn.style.backgroundColor="#27865f";
+        btn.addEventListener("click",function (){
+            addToCart(el);
+        });
+        card.append(Product_img,title,price, btn);
+        
+        document.querySelector("#container").append(card);
+    });
+    
+    function addToCart(el){
+    cartarr.push(el);
+    localStorage.setItem("cart_items", JSON.stringify(cartarr));
     }
-}
 </script>

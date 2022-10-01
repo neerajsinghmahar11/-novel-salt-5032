@@ -338,6 +338,48 @@
             height: 20px;
         }
 
+        #container{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height: auto;
+            gap: 60px 20px;
+            margin-top: 60px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #container>div>h3{
+            font-family:  Helvetica, sans-serif;
+            padding: 3%;
+            text-align: center;
+        }
+        #container>div>p{
+            margin: auto;
+            text-align: center;
+        }
+        #container>div>button{
+            margin: auto;
+            margin-top: 4px;
+            height: auto;
+            width: 40%;
+            border-radius: 20px;
+            padding:5px 5px;
+            background-color: #27865f;
+            cursor: pointer;
+        }
+
+        .product-heading{
+            width: 25%;
+            margin: auto;
+            margin-top: 160px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 40px;
+            border-bottom: 2px solid #27865f;
+        }
     </style>
 </head>
 <body>
@@ -431,37 +473,9 @@
 </div>
     
     </div>
-    <!-- sign up   -->
-    <div class="AC">
-        <div>
-            <form id="signup">
-                <h2>Create Account</h2>
-                <label for="" >Full name</label><br>
-                <input id="name" type="text" placeholder="Enter your full name" >
-                <br> 
-                <label for="" i>Email</label><br>
-                <input id="email" type="text" placeholder="Enter email" >
-                <br>
-                <label for="" >Password</label><br>
-                <input id="pass" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#0272a2; color: #fff;" type="submit" value="SIGN UP">
-            </form>
-        </div>
-        <div>
-            <form id="login">
-                <h2>Sign in</h2>
-                <label for="">Email</label><br>
-                <input id="logemail" type="text" placeholder="Enter email" >
-                <br>
-                <label for="">Password</label><br>
-                <input id="logpassword" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#27865f; color: #fff;" type="submit" value="LOG IN">
-        </form>
-        </div>
-    </div>
     
+    <h1 class="product-heading">Kitchen Furniture</h1>
+    <div id="container"></div>
     <!-- <footer></footer> -->
     <Footer>
         <div class="Footer">
@@ -567,41 +581,175 @@
     </Footer>
 </body>
 </html>
+
 <script>
-let sign_form=document.querySelector("#signup");
-    sign_form.addEventListener("submit",myfunc);
+    let kitchenData = [
 
-    function myfunc(event){    
-    event.preventDefault();
-    let name=document.querySelector("#name").value;
-    localStorage.setItem("name",name);
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4ddf9c08e1697b8fbfd4f6d62e0f0558fd777f17/Multifunction-Kitchen-Island-with-Undershelves-and-Side-Hooks.jpg?imwidth=480&impolicy=medium",
+      name: "Industrial Kitchen Island with Storage Shelves,Small Dining Table with 5 Shelves, Saving Space(Not Including Stools)",
+      price: "22720",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/6711230/Chris-and-Chris-Stadium-Kitchen-Work-Station-312e4d18-52f0-480c-966c-8472b5f25f92_600.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Georgia Kitchen Cart",
+      price: "30270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/23ff3b41f052226402ee2ab026cffa192851bc13/Porch-%26-Den-Jefferson-Glass-Sliding-Door-Stackable-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name:" OS Framed Glass Door Kitchen Buffet Hutch - N/A",
+      price: "25618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/3b8076d517415410766f9809f72dfa1f3dd1f6ce/Multifunction-Kitchen-Island-with-Open-Shelves%2C-Spice-Rack-%26-12-Hooks.jpg?imwidth=480&impolicy=medium",
+        name: "Colorado Pantry Cabinet",
+        price: "31205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/d26e81ecf17aa292535d6d99f355533071420edf/FirsTime-%26-Co.%C2%AE-White-Aurora-Farmhouse-Kitchen-Cart%2C-American-Crafted%2C-Aged-White%2C-Wood%2C-31.5-x-16-x-31.5-in.jpg?imwidth=480&impolicy=medium",
+        name: "Julianna Green Apartment Cart",
+        price: "18505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/c03aa74dda39e486475abd754f71da5347b349d6/Kolin-Modern-Kitchen-Shelf.jpg?imwidth=480&impolicy=medium",
+        name: "Furniture of America Figg Rustic Multi-shelf Microwave Cabinet",
+        price: "38205",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4ddf9c08e1697b8fbfd4f6d62e0f0558fd777f17/Multifunction-Kitchen-Island-with-Undershelves-and-Side-Hooks.jpg?imwidth=480&impolicy=medium",
+      name: "Industrial Kitchen Island with Storage Shelves,Small Dining Table with 5 Shelves, Saving Space(Not Including Stools)",
+      price: "22720",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/6711230/Chris-and-Chris-Stadium-Kitchen-Work-Station-312e4d18-52f0-480c-966c-8472b5f25f92_600.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Georgia Kitchen Cart",
+      price: "30270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/23ff3b41f052226402ee2ab026cffa192851bc13/Porch-%26-Den-Jefferson-Glass-Sliding-Door-Stackable-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name:" OS Framed Glass Door Kitchen Buffet Hutch - N/A",
+      price: "25618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/3b8076d517415410766f9809f72dfa1f3dd1f6ce/Multifunction-Kitchen-Island-with-Open-Shelves%2C-Spice-Rack-%26-12-Hooks.jpg?imwidth=480&impolicy=medium",
+        name: "Colorado Pantry Cabinet",
+        price: "31205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/d26e81ecf17aa292535d6d99f355533071420edf/FirsTime-%26-Co.%C2%AE-White-Aurora-Farmhouse-Kitchen-Cart%2C-American-Crafted%2C-Aged-White%2C-Wood%2C-31.5-x-16-x-31.5-in.jpg?imwidth=480&impolicy=medium",
+        name: "Julianna Green Apartment Cart",
+        price: "18505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/c03aa74dda39e486475abd754f71da5347b349d6/Kolin-Modern-Kitchen-Shelf.jpg?imwidth=480&impolicy=medium",
+        name: "Furniture of America Figg Rustic Multi-shelf Microwave Cabinet",
+        price: "38205",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4ddf9c08e1697b8fbfd4f6d62e0f0558fd777f17/Multifunction-Kitchen-Island-with-Undershelves-and-Side-Hooks.jpg?imwidth=480&impolicy=medium",
+      name: "Industrial Kitchen Island with Storage Shelves,Small Dining Table with 5 Shelves, Saving Space(Not Including Stools)",
+      price: "22720",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/6711230/Chris-and-Chris-Stadium-Kitchen-Work-Station-312e4d18-52f0-480c-966c-8472b5f25f92_600.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Georgia Kitchen Cart",
+      price: "30270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/23ff3b41f052226402ee2ab026cffa192851bc13/Porch-%26-Den-Jefferson-Glass-Sliding-Door-Stackable-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name:" OS Framed Glass Door Kitchen Buffet Hutch - N/A",
+      price: "25618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/3b8076d517415410766f9809f72dfa1f3dd1f6ce/Multifunction-Kitchen-Island-with-Open-Shelves%2C-Spice-Rack-%26-12-Hooks.jpg?imwidth=480&impolicy=medium",
+        name: "Colorado Pantry Cabinet",
+        price: "31205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/d26e81ecf17aa292535d6d99f355533071420edf/FirsTime-%26-Co.%C2%AE-White-Aurora-Farmhouse-Kitchen-Cart%2C-American-Crafted%2C-Aged-White%2C-Wood%2C-31.5-x-16-x-31.5-in.jpg?imwidth=480&impolicy=medium",
+        name: "Julianna Green Apartment Cart",
+        price: "18505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/c03aa74dda39e486475abd754f71da5347b349d6/Kolin-Modern-Kitchen-Shelf.jpg?imwidth=480&impolicy=medium",
+        name: "Furniture of America Figg Rustic Multi-shelf Microwave Cabinet",
+        price: "38205",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4ddf9c08e1697b8fbfd4f6d62e0f0558fd777f17/Multifunction-Kitchen-Island-with-Undershelves-and-Side-Hooks.jpg?imwidth=480&impolicy=medium",
+      name: "Industrial Kitchen Island with Storage Shelves,Small Dining Table with 5 Shelves, Saving Space(Not Including Stools)",
+      price: "22720",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/6711230/Chris-and-Chris-Stadium-Kitchen-Work-Station-312e4d18-52f0-480c-966c-8472b5f25f92_600.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Georgia Kitchen Cart",
+      price: "30270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/23ff3b41f052226402ee2ab026cffa192851bc13/Porch-%26-Den-Jefferson-Glass-Sliding-Door-Stackable-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name:" OS Framed Glass Door Kitchen Buffet Hutch - N/A",
+      price: "25618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/3b8076d517415410766f9809f72dfa1f3dd1f6ce/Multifunction-Kitchen-Island-with-Open-Shelves%2C-Spice-Rack-%26-12-Hooks.jpg?imwidth=480&impolicy=medium",
+        name: "Colorado Pantry Cabinet",
+        price: "31205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/d26e81ecf17aa292535d6d99f355533071420edf/FirsTime-%26-Co.%C2%AE-White-Aurora-Farmhouse-Kitchen-Cart%2C-American-Crafted%2C-Aged-White%2C-Wood%2C-31.5-x-16-x-31.5-in.jpg?imwidth=480&impolicy=medium",
+        name: "Julianna Green Apartment Cart",
+        price: "18505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/c03aa74dda39e486475abd754f71da5347b349d6/Kolin-Modern-Kitchen-Shelf.jpg?imwidth=480&impolicy=medium",
+        name: "Furniture of America Figg Rustic Multi-shelf Microwave Cabinet",
+        price: "38205",
+    },
 
-    let mail=document.querySelector("#email").value;
-    localStorage.setItem("email",mail);
-
-    let pass=document.querySelector("#pass").value;
-    localStorage.setItem("password",pass);
-
-        alert("SignUp Successful");
-}
-
-    let login_form=document.querySelector("#login");
-login_form.addEventListener("submit",logg);
-
-function logg(event){
-    event.preventDefault();
     
-    let mail=document.querySelector("#logemail").value;
-    let password=document.querySelector("#logpassword").value;
-     // console.log(password,mail);
+    ];
+    let cartarr=JSON.parse(localStorage.getItem("cart_items")) || [];
 
-    let lsemail=localStorage.getItem("email")
-    let lspass=localStorage.getItem("password")
+    kitchenData.forEach(function(el){
 
-    if(lsemail===mail && lspass===password){
-        alert("Login Successful");
-    }else{
-        alert("Wrong Details");
+        let card=document.createElement("div");
+        // creating img 
+        let Product_img=document.createElement("img");
+        Product_img.src=el.image_url;
+        // creating_title
+        let title=document.createElement("h3");
+        title.innerText=el.name;
+        // creating price 
+        let price=document.createElement("p")
+        price.style.fontSize="17px";
+        price.style.fontFamily="Helvetica, sans-serif";
+        price.innerText="price: "+el.price+" /-";
+        // creating button 
+        let btn=document.createElement("button");
+        btn.innerText="Add to Cart";
+        btn.style.backgroundColor="#27865f";
+        btn.addEventListener("click",function (){
+            addToCart(el);
+        });
+        card.append(Product_img,title,price, btn);
+        
+        document.querySelector("#container").append(card);
+    });
+    
+    function addToCart(el){
+    cartarr.push(el);
+    localStorage.setItem("cart_items", JSON.stringify(cartarr));
     }
-}
 </script>

@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>furnitures</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/f88ab20891.js" crossorigin="anonymous"></script>
+    <title>Account</title>
     <style>
-
-*{
+                *{
             margin: 0;
             padding: 0;
         }
@@ -241,8 +240,39 @@
             display: inline-flex;
         }
 
-              /* footer  */
-              Footer{
+/* signpu & login  */
+        .AC{
+            display: flex;
+            width: 40%;
+            margin: auto;
+            margin-top: 150px;
+            height: auto;
+        }
+        .AC>div{
+            width: 100%;
+            padding: 10%;
+            font-family: Helvetica, sans-serif;
+        }
+        .AC>div+div{
+            border-left: 1px solid #dadcdf;
+        }
+        .AC>div>form>h2{
+            margin: 10px 0px;
+            color: #2f3337;
+            font-family: Helvetica, sans-serif;
+        }
+        .AC>div>form>input{
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #dadcdf;
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+
+        /* footer  */
+        Footer{
             background-color: #545658;
 
         }
@@ -308,97 +338,63 @@
             height: 20px;
         }
 
-        .fur-h1{
-            margin: auto;
-            margin-top: 160px;
-            width: 75%;
-            font-family:  Helvetica, sans-serif;
-            font-size: 20px;
-            color: #2f3337;
-        }
-        .fur-top{
+
+        #container{
             width: 75%;
             margin: auto;
-            display: flex;
-            gap:25px;
-            margin-top: 50px;
-        }
-
-        .fur-bar>h2{
-            color: #2f3337;
-            font-family: Helvetica, sans-serif;
-            font-size: 25px;
-            margin-bottom: 30px;
-        }
-        .fur-bar{
-            width: 25%; 
-        }
-        .fur-bar>ul{
-            list-style: none;
-        }
-        .fur-bar>ul>li{
-            text-decoration: none;
-            line-height: 35px;
-            
-        }
-        .fur-bar>ul>li>a{
-            margin-left: 10px;
-            color: #2f3337;
-            font-size: 17px;
-            font-family:Helvetica, sans-serif;
-        }
-        .fur-bar>ul>li:hover{
-            border-left: 2px solid teal;
-            background-color: #dadcdf;
-
-        }
-        .fur-bar+div{
-            width: 50%;
-        }
-        .fur-top>div:last-child{
-            width: 25%;
-        }
-        .fur-top>div:last-child>div{
-            height: 50%;
-        }
-        .fur-top>div:last-child>div img{
-            margin-top: 40%;
-        }
-        .h2{
-            color: #2f3337;
-            font-family: Helvetica, sans-serif;
-            font-size: 17px;
-            margin-top: 60px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .popular-cat{
             display: grid;
-            grid-template-columns: repeat(4,1fr);
-            width: 75%;
-            margin: auto;
-            gap: 20px 20px;
+            grid-template-columns: repeat(3,1fr);
             height: auto;
+            gap: 40px;
+            margin-top: 60px;
         }
-        .popular-cat>a>div{
-            height: auto;
-        }
-        .popular-cat>a>div>img{
+        #container>div>img{
             width: 100%;
         }
-        .popular-cat>a>div>h3{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 22px;
-            font-family: Helvetica, sans-serif;
-            color: #2f3337;
-            background-color: #f9fafb;
-            padding:10px 0px;
+        #container>div>h3{
+            font-family:  Helvetica, sans-serif;
+            padding: 3%;
+            text-align: center;
+        }
+        #container>div>p{
+            margin: auto;
+            text-align: center;
+        }
+        #container>div>button{
+            margin: auto;
+            margin-top: 4px;
+            height: auto;
+            width: 40%;
+            border-radius: 20px;
+            padding:5px 5px;
+
+            
+        }
+        #container>div>button:hover{
+            cursor: pointer;
+            box-shadow: green ;
         }
 
+        .product-heading{
+            width: 25%;
+            margin: auto;
+            margin-top: 160px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 40px;
+            border-bottom: 2px solid red;
+        }
+        .TI{
+            margin-left: 20px;
+            font-family: Helvetica, sans-serif;
+        }
+        .TC{
+            margin-left: 20px;
+            font-family: Helvetica, sans-serif;
+            font-size: 30px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -474,15 +470,15 @@
             <ul>
                 <li><a href="furniture.html">Furniture</a></li>
                 <li><a href="#">Rugs</a></li>
-                <li><a href="Recreation-Room.html">Decor</a></li>
-                <li><a href="Bedroom-Furniture.html">Bedding</a></li>
-                <li><a href="Dining-Room-Furniture.html">Home Improvement</a></li>
-                <li><a href="Kitchen-Furniture.html">Kitchen</a></li>
+                <li><a href="#">Decor</a></li>
+                <li><a href="#">Bedding</a></li>
+                <li><a href="#">Home Improvement</a></li>
+                <li><a href="#">Kitchen</a></li>
                 <li><a href="#">Outdoor</a></li>
                 <li><a href="#">Lightning</a></li>
-                <li><a href="Kids-&-Toddler-Furniture.html">Kids Baby</a></li>
-                <li><a href="Home-Office-Furniture.html">More</a></li>
-                <li><a href="Small-Space-Furniture.html">Ideas</a></li>
+                <li><a href="#">Kids Baby</a></li>
+                <li><a href="#">More</a></li>
+                <li><a href="#">Ideas</a></li>
                 <li><a style="color: red;" href="#">Sales & Deals</a></li>
             </ul>
         
@@ -492,226 +488,161 @@
 </div>
     
     </div>
-    <div class="fur-h1">
-        <h1>Furniture</h1>
-    </div>
-
-    <div class="fur-top">
-        <div class="fur-bar">
-            <h2>Featured Categories</h2>
-            <ul>
-                <li><a href="living-room-furniture.html">Living Room Furniture</a></li>
-                <li><a href="Dining-Room-Furniture.html">Dining Room Furniture</a></li>
-                <li><a href="Bedroom-Furniture.html">Bedroom Furniture</a></li>
-                <li><a href="Patio-Furniture.html">Patio Furniture</a></li>
-                <li><a href="Kitchen-Furniture.html">Kitchen Furniture</a></li>
-                <li><a href="Entryway-Furniture.html">Entryway Furniture</a></li>
-                <li><a href="Home-Office-Furniture.html">Home Office Furniture</a></li>
-                <li><a href="Small-Space-Furniture.html">Small Space Furniture</a></li>
-                <li><a href="Bathroom-Furniture.html">Bathroom Furniture</a></li>
-                <li><a href="Mattresses.html">Mattresses</a></li>
-                <li><a href="Recreation-Room.html">Recreation Room</a></li>
-                <li><a href="Kids-&-Toddler-Furniture.html">Kids & Toddler Furniture</a></li>
-                <li><a style="color: red;" href="living-room-furniture.html">Shop All Furniture on Sale</a></li>
-            </ul>
-        </div>
-        <div>
-            <a href="#"><img src="https://ak1.ostkcdn.com/img/mxc/09262022_Desktop_Furniture_AshleyFurniture.jpg?imwidth=680" alt=""></a>
-        </div>
-        <div>
-            <div>
-                <div></div>
-                <div><a href="#"><img src="https://ak1.ostkcdn.com/img/mxc/2022-04-12-temporary-virtual-showcase.png" alt=""></a></div>
-            </div>
-            <div>
-                <div>
-                    <a href="#"><img src="https://ak1.ostkcdn.com/img/mxc/09272022_Furniture_MM_01.png?imwidth=320" alt=""></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="h2">
-        <h2>Popular Furniture Categories</h2>
-    </div>
-
-    <div class="popular-cat">
-        <a href="Patio-Furniture.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Patio_Furniture.jpg" alt="">
-                <h3>Patio furniture</h3>
-            </div>
-        </a>
-        <a href="">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Living_Room_Furniture.jpg" alt="">
-                <h3>Living Room Furniture</h3>
-            </div>
-        </a>
-        <a href="Dining-Room-Furniture.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Dining_Room_Furniture.jpg" alt="">
-                <h3>Dining Room Furniture</h3>
-            </div>
-        </a>
-        <a href="Bedroom-Furniture.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Bedroom_Furniture.jpg" alt="">
-                <h3>Bedroom Furniture</h3>
-            </div>
-        </a>
-        <a href="Mattresses.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Mattresses.jpg" alt="">
-                <h3>Mattresses</h3>
-            </div>
-        </a>
-        <a href="Home-Office-Furniture.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Home_Office_Furniture.jpg" alt="">
-                <h3>Home Office Furniture</h3>
-            </div>
-        </a>
-        <a href="Small-Space-Furniture.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Small_Space_Furniture.jpg" alt="">
-                <h3>Small Space Furniture</h3>
-            </div>
-        </a>
-        <a href="Kitchen-Furniture.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Kitchen_Furniture.jpg" alt="">
-                <h3>Kitchen Furniture</h3>
-            </div>
-        </a>
-        <a href="Entryway-Furniture.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Entryway_Furniture.jpg" alt="">
-                <h3>Entryway Furniture</h3>
-            </div>
-        </a>
-        <a href="Bathroom-Furniture.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Bathroom_Furniture.jpg" alt="">
-                <h3>Bathroom Furniture</h3>
-            </div>
-        </a>
-        <a href="Recreation-Room.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/09062021_FALL2021_Furni_PopCat_11.jpg" alt="">
-                <h3>Recreation Furniture</h3>
-            </div>
-        </a>
-        <a href="Kids-&-Toddler-Furniture.html">
-            <div>
-                <img src="https://ak1.ostkcdn.com/img/mxc/07062022_SUMMER_FURNI_PopCat_Kids_Room.jpg" alt="">
-                <h3>Kids & Toddler Room Furniture</h3>
-            </div>
-        </a>
-    </div>
+    
+    <p class="product-heading">Cart Products</p>
+    <h1 class="TI">Total Items: <span></span>&nbsp;only.</h1>
+    <h2 class="TC">Total cost: <span></span>&nbsp;/-</h2>
+    <div id="container"></div>
+    
+    
     <!-- <footer></footer> -->
     <Footer>
-    <div class="Footer">
-        <div>
-            <a href="#">
-                <h3>MY ACCOUNT</h3>
-            </a>
-            <a href="#">
-                <p>Orders & Returns</p>
+        <div class="Footer">
+            <div>
+                <a href="#">
+                    <h3>MY ACCOUNT</h3>
+                </a>
+                <a href="#">
+                    <p>Orders & Returns</p>
 
-            </a>
-            <a href="#">
-                <p>Email Preferences</p>
+                </a>
+                <a href="#">
+                    <p>Email Preferences</p>
 
-            </a>
-            <a href="#">
-                <p>Account Settings</p>
+                </a>
+                <a href="#">
+                    <p>Account Settings</p>
 
-            </a>
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <h3>LET US HELP</h3>
+
+                </a>
+                <a href="#">
+                    <p>Contact Customer Care</p>
+
+                </a>
+                <a href="#">
+                    <p>Shipping Information</p>
+
+                </a>
+                <a href="#">
+                    <p>Return Policy</p>
+
+                </a>
+                <a href="#">
+                    <p>International Help</p>
+
+                </a>
+                <a href="#">
+                    <p>Accessibility</p>
+
+                </a>
+            </div>
+            <div>
+                <a href="#">
+                    <h3>COMPANY INFORMATION</h3>
+
+                </a>
+                <a href="#">
+                    <p>About Overstock™</p>
+
+                </a>
+                <a href="#">
+                    <p>Contact Us</p>
+
+                </a>
+                <a href="#">
+                    <p>Careers</p>
+
+                </a>
+                <a href="#">
+                    <p>Investor Relations</p>
+
+                </a>
+                <a href="#">
+                    <p>Sell Your Products</p>
+
+                </a>
+                <a href="#">
+                    <p>Supply Chain Transparency</p>
+
+                </a>
+            </div>
+
+            <div>
+                <a href="#"><h3>MORE WAYS TO SHOP</h3></a>
+                <a href="#"><p>Tips & Ideas</p></a>
+                <a href="#"><p>Deals</p></a>
+                <a href="#"><p>Clearance</p></a>
+                <a href="#"><p>New Arrivals</p></a>
+            </div>
         </div>
-        <div>
-            <a href="#">
-                <h3>LET US HELP</h3>
 
-            </a>
-            <a href="#">
-                <p>Contact Customer Care</p>
-
-            </a>
-            <a href="#">
-                <p>Shipping Information</p>
-
-            </a>
-            <a href="#">
-                <p>Return Policy</p>
-
-            </a>
-            <a href="#">
-                <p>International Help</p>
-
-            </a>
-            <a href="#">
-                <p>Accessibility</p>
-
-            </a>
-        </div>
-        <div>
-            <a href="#">
-                <h3>COMPANY INFORMATION</h3>
-
-            </a>
-            <a href="#">
-                <p>About Overstock™</p>
-
-            </a>
-            <a href="#">
-                <p>Contact Us</p>
-
-            </a>
-            <a href="#">
-                <p>Careers</p>
-
-            </a>
-            <a href="#">
-                <p>Investor Relations</p>
-
-            </a>
-            <a href="#">
-                <p>Sell Your Products</p>
-
-            </a>
-            <a href="#">
-                <p>Supply Chain Transparency</p>
-
-            </a>
-        </div>
-
-        <div>
-            <a href="#"><h3>MORE WAYS TO SHOP</h3></a>
-            <a href="#"><p>Tips & Ideas</p></a>
-            <a href="#"><p>Deals</p></a>
-            <a href="#"><p>Clearance</p></a>
-            <a href="#"><p>New Arrivals</p></a>
+    <div class="feet">
+        <div class="footer-nav">
+            <div>
+                <p>© Copyright 2022, Overstock.com®, Inc.</p>
+                <p>799 Coliseum Way Midvale, UT 84047 | 1-800-843-2446</p>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">*Promotion Terms</a></li>
+                    <li><a href="#"><span>Ship to:<img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt=""></span></a></li>
+                </ul>
+            </div>
         </div>
     </div>
-
-<div class="feet">
-    <div class="footer-nav">
-        <div>
-            <p>© Copyright 2022, Overstock.com®, Inc.</p>
-            <p>799 Coliseum Way Midvale, UT 84047 | 1-800-843-2446</p>
-        </div>
-        <div>
-            <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">*Promotion Terms</a></li>
-                <li><a href="#"><span>Ship to:<img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt=""></span></a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-</Footer>
+    </Footer>
 </body>
 </html>
+
+<script>
+    let ATCfromLS=JSON.parse(localStorage.getItem("cart_items")) || [];
+    
+    let total_price=ATCfromLS.reduce(function(acc,el){
+        return acc+Number(el.price);
+    },0)
+    document.querySelector("h2>span").innerText=total_price;
+    document.querySelector("h1>span").innerText=ATCfromLS.length;
+    
+    
+    ATCfromLS.forEach(function(el){
+
+let card=document.createElement("div");
+
+let Product_img=document.createElement("img");
+Product_img.src=el.image_url;
+
+let title=document.createElement("h3");
+title.innerText=el.name;
+
+let price=document.createElement("p")
+price.innerText="price: "+el.price+" /-";
+price.style.fontFamily="Helvetica, sans-serif";
+price.style.fontSize="17px";
+let btn=document.createElement("button");
+btn.innerText="Delete";
+btn.style.backgroundColor="red";
+btn.style.width="20%";
+btn.addEventListener("click",function (event){
+    event.target.parentNode.remove();
+    removefromcart(el);
+})
+let buy=document.createElement("button");
+buy.style.backgroundColor="#27865f";
+buy.innerText="Buy";
+card.append(Product_img,title,price,buy,btn);
+
+document.querySelector("#container").append(card);
+});
+function removefromcart(el){
+    ATCfromLS.splice(el, 1);
+    localStorage.setItem("cart_items",JSON.stringify(ATCfromLS));
+}
+
+</script>  
