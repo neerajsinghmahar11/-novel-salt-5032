@@ -338,6 +338,48 @@
             height: 20px;
         }
 
+        #container{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height: auto;
+            gap: 60px 20px;
+            margin-top: 60px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #container>div>h3{
+            font-family:  Helvetica, sans-serif;
+            padding: 3%;
+            text-align: center;
+        }
+        #container>div>p{
+            margin: auto;
+            text-align: center;
+        }
+        #container>div>button{
+            margin: auto;
+            margin-top: 4px;
+            height: auto;
+            width: 40%;
+            border-radius: 20px;
+            padding:5px 5px;
+            background-color: #27865f;
+            cursor: pointer;
+        }
+
+        .product-heading{
+            width: 25%;
+            margin: auto;
+            margin-top: 160px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 40px;
+            border-bottom: 2px solid #27865f;
+        }
     </style>
 </head>
 <body>
@@ -431,37 +473,9 @@
 </div>
     
     </div>
-    <!-- sign up   -->
-    <div class="AC">
-        <div>
-            <form id="signup">
-                <h2>Create Account</h2>
-                <label for="" >Full name</label><br>
-                <input id="name" type="text" placeholder="Enter your full name" >
-                <br> 
-                <label for="" i>Email</label><br>
-                <input id="email" type="text" placeholder="Enter email" >
-                <br>
-                <label for="" >Password</label><br>
-                <input id="pass" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#0272a2; color: #fff;" type="submit" value="SIGN UP">
-            </form>
-        </div>
-        <div>
-            <form id="login">
-                <h2>Sign in</h2>
-                <label for="">Email</label><br>
-                <input id="logemail" type="text" placeholder="Enter email" >
-                <br>
-                <label for="">Password</label><br>
-                <input id="logpassword" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#27865f; color: #fff;" type="submit" value="LOG IN">
-        </form>
-        </div>
-    </div>
     
+    <h1 class="product-heading">Dining Room Furniture</h1>
+    <div id="container"></div>
     <!-- <footer></footer> -->
     <Footer>
         <div class="Footer">
@@ -567,41 +581,175 @@
     </Footer>
 </body>
 </html>
+
 <script>
-let sign_form=document.querySelector("#signup");
-    sign_form.addEventListener("submit",myfunc);
+    let diningData = [
 
-    function myfunc(event){    
-    event.preventDefault();
-    let name=document.querySelector("#name").value;
-    localStorage.setItem("name",name);
-
-    let mail=document.querySelector("#email").value;
-    localStorage.setItem("email",mail);
-
-    let pass=document.querySelector("#pass").value;
-    localStorage.setItem("password",pass);
-
-        alert("SignUp Successful");
-}
-
-    let login_form=document.querySelector("#login");
-login_form.addEventListener("submit",logg);
-
-function logg(event){
-    event.preventDefault();
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/dd5f57a02c2d4d3a2c6c9f4d9ba29a6a40fde971/Contemporary-X-door-Wine-Bar-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name: "47 in. Modern Contemporary X-Door Wine Bar Cabinet",
+      price: "24820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4264f8bc6f7411d93a41bcfadf847952575ebf80/Zenvida-5-Piece-Bistro---Pub-Table-Set-With-4-Stools.jpg?imwidth=480&impolicy=medium",
+      name: "Zenvida Rustic Grey Bistro / Pub Table 5-piece Dining Set",
+      price: "22270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/fa60b94336d4a60c62b883bff19daa1dac8f9d3c/Simple-Living-Templeton-5-Piece-Dining-Set.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Templeton Wood 5-piece Dining Set",
+      price: "26618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/7d980b328ce33ccc0cb3d4adbd864675b20e6a09/Chazz-Mid-century-Dining-Chair-by-Christopher-Knight-Home-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        name: "Chazz Mid Century Fabric Dining Chairs (Set of 2) by Christopher Knight Home",
+        price: "7505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/355edfd3752748772420c31058a5f5bc38174a55/LeatherSoft-Counter-height-Stools-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        name: "Middlebrook Cassandra 58-inch Mid-century Modern 4-door Buffet",
+        price: "27505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/b72199d22d8c50160a99566afef66fe167f99d92/Middlebrook-Cassandra-58-inch-Mid-century-Modern-4-door-Buffet.jpg?imwidth=480&impolicy=medium",
+        name: "Copper Grove Aubrieta1 Drawer Chairside End Table with Shelves",
+        price: "9505",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/dd5f57a02c2d4d3a2c6c9f4d9ba29a6a40fde971/Contemporary-X-door-Wine-Bar-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name: "47 in. Modern Contemporary X-Door Wine Bar Cabinet",
+      price: "24820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4264f8bc6f7411d93a41bcfadf847952575ebf80/Zenvida-5-Piece-Bistro---Pub-Table-Set-With-4-Stools.jpg?imwidth=480&impolicy=medium",
+      name: "Zenvida Rustic Grey Bistro / Pub Table 5-piece Dining Set",
+      price: "22270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/fa60b94336d4a60c62b883bff19daa1dac8f9d3c/Simple-Living-Templeton-5-Piece-Dining-Set.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Templeton Wood 5-piece Dining Set",
+      price: "26618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/7d980b328ce33ccc0cb3d4adbd864675b20e6a09/Chazz-Mid-century-Dining-Chair-by-Christopher-Knight-Home-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        name: "Chazz Mid Century Fabric Dining Chairs (Set of 2) by Christopher Knight Home",
+        price: "7505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/355edfd3752748772420c31058a5f5bc38174a55/LeatherSoft-Counter-height-Stools-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        name: "Middlebrook Cassandra 58-inch Mid-century Modern 4-door Buffet",
+        price: "27505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/b72199d22d8c50160a99566afef66fe167f99d92/Middlebrook-Cassandra-58-inch-Mid-century-Modern-4-door-Buffet.jpg?imwidth=480&impolicy=medium",
+        name: "Copper Grove Aubrieta1 Drawer Chairside End Table with Shelves",
+        price: "9505",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/dd5f57a02c2d4d3a2c6c9f4d9ba29a6a40fde971/Contemporary-X-door-Wine-Bar-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name: "47 in. Modern Contemporary X-Door Wine Bar Cabinet",
+      price: "24820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4264f8bc6f7411d93a41bcfadf847952575ebf80/Zenvida-5-Piece-Bistro---Pub-Table-Set-With-4-Stools.jpg?imwidth=480&impolicy=medium",
+      name: "Zenvida Rustic Grey Bistro / Pub Table 5-piece Dining Set",
+      price: "22270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/fa60b94336d4a60c62b883bff19daa1dac8f9d3c/Simple-Living-Templeton-5-Piece-Dining-Set.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Templeton Wood 5-piece Dining Set",
+      price: "26618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/7d980b328ce33ccc0cb3d4adbd864675b20e6a09/Chazz-Mid-century-Dining-Chair-by-Christopher-Knight-Home-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        name: "Chazz Mid Century Fabric Dining Chairs (Set of 2) by Christopher Knight Home",
+        price: "7505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/355edfd3752748772420c31058a5f5bc38174a55/LeatherSoft-Counter-height-Stools-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        name: "Middlebrook Cassandra 58-inch Mid-century Modern 4-door Buffet",
+        price: "27505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/b72199d22d8c50160a99566afef66fe167f99d92/Middlebrook-Cassandra-58-inch-Mid-century-Modern-4-door-Buffet.jpg?imwidth=480&impolicy=medium",
+        name: "Copper Grove Aubrieta1 Drawer Chairside End Table with Shelves",
+        price: "9505",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/dd5f57a02c2d4d3a2c6c9f4d9ba29a6a40fde971/Contemporary-X-door-Wine-Bar-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name: "47 in. Modern Contemporary X-Door Wine Bar Cabinet",
+      price: "24820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4264f8bc6f7411d93a41bcfadf847952575ebf80/Zenvida-5-Piece-Bistro---Pub-Table-Set-With-4-Stools.jpg?imwidth=480&impolicy=medium",
+      name: "Zenvida Rustic Grey Bistro / Pub Table 5-piece Dining Set",
+      price: "22270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/fa60b94336d4a60c62b883bff19daa1dac8f9d3c/Simple-Living-Templeton-5-Piece-Dining-Set.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Templeton Wood 5-piece Dining Set",
+      price: "26618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/7d980b328ce33ccc0cb3d4adbd864675b20e6a09/Chazz-Mid-century-Dining-Chair-by-Christopher-Knight-Home-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        name: "Chazz Mid Century Fabric Dining Chairs (Set of 2) by Christopher Knight Home",
+        price: "7505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/355edfd3752748772420c31058a5f5bc38174a55/LeatherSoft-Counter-height-Stools-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        name: "Middlebrook Cassandra 58-inch Mid-century Modern 4-door Buffet",
+        price: "27505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/b72199d22d8c50160a99566afef66fe167f99d92/Middlebrook-Cassandra-58-inch-Mid-century-Modern-4-door-Buffet.jpg?imwidth=480&impolicy=medium",
+        name: "Copper Grove Aubrieta1 Drawer Chairside End Table with Shelves",
+        price: "9505",
+    },
     
-    let mail=document.querySelector("#logemail").value;
-    let password=document.querySelector("#logpassword").value;
-     // console.log(password,mail);
+   
+      ];
+    let cartarr=JSON.parse(localStorage.getItem("cart_items")) || [];
 
-    let lsemail=localStorage.getItem("email")
-    let lspass=localStorage.getItem("password")
+    diningData.forEach(function(el){
 
-    if(lsemail===mail && lspass===password){
-        alert("Login Successful");
-    }else{
-        alert("Wrong Details");
+        let card=document.createElement("div");
+        // creating img 
+        let Product_img=document.createElement("img");
+        Product_img.src=el.image_url;
+        // creating_title
+        let title=document.createElement("h3");
+        title.innerText=el.name;
+        // creating price 
+        let price=document.createElement("p")
+        price.style.fontSize="17px";
+        price.style.fontFamily="Helvetica, sans-serif";
+        price.innerText="price: "+el.price+" /-";
+        // creating button 
+        let btn=document.createElement("button");
+        btn.innerText="Add to Cart";
+        btn.style.backgroundColor="#27865f";
+        btn.addEventListener("click",function (){
+            addToCart(el);
+        });
+        card.append(Product_img,title,price, btn);
+        
+        document.querySelector("#container").append(card);
+    });
+    
+    function addToCart(el){
+    cartarr.push(el);
+    localStorage.setItem("cart_items", JSON.stringify(cartarr));
     }
-}
 </script>

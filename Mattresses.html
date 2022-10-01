@@ -338,6 +338,48 @@
             height: 20px;
         }
 
+        #container{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height: auto;
+            gap: 60px 20px;
+            margin-top: 60px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #container>div>h3{
+            font-family:  Helvetica, sans-serif;
+            padding: 3%;
+            text-align: center;
+        }
+        #container>div>p{
+            margin: auto;
+            text-align: center;
+        }
+        #container>div>button{
+            margin: auto;
+            margin-top: 4px;
+            height: auto;
+            width: 40%;
+            border-radius: 20px;
+            padding:5px 5px;
+            background-color: #27865f;
+            cursor: pointer;
+        }
+
+        .product-heading{
+            width: 25%;
+            margin: auto;
+            margin-top: 160px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 40px;
+            border-bottom: 2px solid #27865f;
+        }
     </style>
 </head>
 <body>
@@ -431,37 +473,9 @@
 </div>
     
     </div>
-    <!-- sign up   -->
-    <div class="AC">
-        <div>
-            <form id="signup">
-                <h2>Create Account</h2>
-                <label for="" >Full name</label><br>
-                <input id="name" type="text" placeholder="Enter your full name" >
-                <br> 
-                <label for="" i>Email</label><br>
-                <input id="email" type="text" placeholder="Enter email" >
-                <br>
-                <label for="" >Password</label><br>
-                <input id="pass" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#0272a2; color: #fff;" type="submit" value="SIGN UP">
-            </form>
-        </div>
-        <div>
-            <form id="login">
-                <h2>Sign in</h2>
-                <label for="">Email</label><br>
-                <input id="logemail" type="text" placeholder="Enter email" >
-                <br>
-                <label for="">Password</label><br>
-                <input id="logpassword" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#27865f; color: #fff;" type="submit" value="LOG IN">
-        </form>
-        </div>
-    </div>
     
+    <h1 class="product-heading">mattresses Furniture</h1>
+    <div id="container"></div>
     <!-- <footer></footer> -->
     <Footer>
         <div class="Footer">
@@ -567,41 +581,174 @@
     </Footer>
 </body>
 </html>
+
 <script>
-let sign_form=document.querySelector("#signup");
-    sign_form.addEventListener("submit",myfunc);
+    let mattressesData = [
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6a126721e562d6cd9279e9d431e3a0c9985ad8cc/LUCID-Comfort-Collection-10-inch-Luxury-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name: "LUCID Comfort Collection 10-inch Luxury Gel Memory Foam Mattress",
+    price: "12720",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e70925d967567a158767cdb66cf5c76ed248899e/LUCID-Comfort-Collection-8-inch-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name: "LUCID Comfort Collection 8-inch Gel Memory Foam Mattress",
+    price: "16270",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/63fa0a11b71aa542e4727bff98e63c70a5a7417b/LUCID-Comfort-Collection-10-inch-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name:" LUCID Comfort Collection Firm 10-inch Gel Memory Foam Mattress",
+    price: "20018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/5c5a0dc09c0f9d35d8d17df2418ccbfa65826f44/OSleep-8-inch-Memory-Foam-and-Innerspring-Hybrid-Mattress.jpg?imwidth=480&impolicy=medium",
+        name: "OSleep 8-inch Memory Foam and Innerspring Hybrid Mattress",
+        price: "11205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/20689874/Linenspa-Essentials-5-Inch-ActiveRelief-trade-Gel-Memory-Foam-Mattress-69bae85c-4fdf-4c31-b383-ad846b545cb8_600.jpg?imwidth=480&impolicy=medium",
+        name: "Linenspa Essentials 5-inch ActiveRelief Gel Memory Foam Mattress",
+        price: "11405",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/4f076b93f46df9a31cd155d3fbe279b49bfdb7d5/OSleep-10-inch-Memory-Foam-and-Innerspring-Hybrid-Mattress.jpg?imwidth=480&impolicy=medium",
+        name: "OSleep 10-inch Memory Foam and Innerspring Hybrid Mattress",
+        price: "20205",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6a126721e562d6cd9279e9d431e3a0c9985ad8cc/LUCID-Comfort-Collection-10-inch-Luxury-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name: "LUCID Comfort Collection 10-inch Luxury Gel Memory Foam Mattress",
+    price: "12720",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e70925d967567a158767cdb66cf5c76ed248899e/LUCID-Comfort-Collection-8-inch-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name: "LUCID Comfort Collection 8-inch Gel Memory Foam Mattress",
+    price: "16270",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/63fa0a11b71aa542e4727bff98e63c70a5a7417b/LUCID-Comfort-Collection-10-inch-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name:" LUCID Comfort Collection Firm 10-inch Gel Memory Foam Mattress",
+    price: "20018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/5c5a0dc09c0f9d35d8d17df2418ccbfa65826f44/OSleep-8-inch-Memory-Foam-and-Innerspring-Hybrid-Mattress.jpg?imwidth=480&impolicy=medium",
+        name: "OSleep 8-inch Memory Foam and Innerspring Hybrid Mattress",
+        price: "11205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/20689874/Linenspa-Essentials-5-Inch-ActiveRelief-trade-Gel-Memory-Foam-Mattress-69bae85c-4fdf-4c31-b383-ad846b545cb8_600.jpg?imwidth=480&impolicy=medium",
+        name: "Linenspa Essentials 5-inch ActiveRelief Gel Memory Foam Mattress",
+        price: "11405",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/4f076b93f46df9a31cd155d3fbe279b49bfdb7d5/OSleep-10-inch-Memory-Foam-and-Innerspring-Hybrid-Mattress.jpg?imwidth=480&impolicy=medium",
+        name: "OSleep 10-inch Memory Foam and Innerspring Hybrid Mattress",
+        price: "20205",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6a126721e562d6cd9279e9d431e3a0c9985ad8cc/LUCID-Comfort-Collection-10-inch-Luxury-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name: "LUCID Comfort Collection 10-inch Luxury Gel Memory Foam Mattress",
+    price: "12720",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e70925d967567a158767cdb66cf5c76ed248899e/LUCID-Comfort-Collection-8-inch-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name: "LUCID Comfort Collection 8-inch Gel Memory Foam Mattress",
+    price: "16270",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/63fa0a11b71aa542e4727bff98e63c70a5a7417b/LUCID-Comfort-Collection-10-inch-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name:" LUCID Comfort Collection Firm 10-inch Gel Memory Foam Mattress",
+    price: "20018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/5c5a0dc09c0f9d35d8d17df2418ccbfa65826f44/OSleep-8-inch-Memory-Foam-and-Innerspring-Hybrid-Mattress.jpg?imwidth=480&impolicy=medium",
+        name: "OSleep 8-inch Memory Foam and Innerspring Hybrid Mattress",
+        price: "11205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/20689874/Linenspa-Essentials-5-Inch-ActiveRelief-trade-Gel-Memory-Foam-Mattress-69bae85c-4fdf-4c31-b383-ad846b545cb8_600.jpg?imwidth=480&impolicy=medium",
+        name: "Linenspa Essentials 5-inch ActiveRelief Gel Memory Foam Mattress",
+        price: "11405",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/4f076b93f46df9a31cd155d3fbe279b49bfdb7d5/OSleep-10-inch-Memory-Foam-and-Innerspring-Hybrid-Mattress.jpg?imwidth=480&impolicy=medium",
+        name: "OSleep 10-inch Memory Foam and Innerspring Hybrid Mattress",
+        price: "20205",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6a126721e562d6cd9279e9d431e3a0c9985ad8cc/LUCID-Comfort-Collection-10-inch-Luxury-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name: "LUCID Comfort Collection 10-inch Luxury Gel Memory Foam Mattress",
+    price: "12720",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e70925d967567a158767cdb66cf5c76ed248899e/LUCID-Comfort-Collection-8-inch-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name: "LUCID Comfort Collection 8-inch Gel Memory Foam Mattress",
+    price: "16270",
+    },
+    {
+    image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/63fa0a11b71aa542e4727bff98e63c70a5a7417b/LUCID-Comfort-Collection-10-inch-Gel-Memory-Foam-Mattress.jpg?imwidth=480&impolicy=medium",
+    name:" LUCID Comfort Collection Firm 10-inch Gel Memory Foam Mattress",
+    price: "20018",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/5c5a0dc09c0f9d35d8d17df2418ccbfa65826f44/OSleep-8-inch-Memory-Foam-and-Innerspring-Hybrid-Mattress.jpg?imwidth=480&impolicy=medium",
+        name: "OSleep 8-inch Memory Foam and Innerspring Hybrid Mattress",
+        price: "11205",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/20689874/Linenspa-Essentials-5-Inch-ActiveRelief-trade-Gel-Memory-Foam-Mattress-69bae85c-4fdf-4c31-b383-ad846b545cb8_600.jpg?imwidth=480&impolicy=medium",
+        name: "Linenspa Essentials 5-inch ActiveRelief Gel Memory Foam Mattress",
+        price: "11405",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/4f076b93f46df9a31cd155d3fbe279b49bfdb7d5/OSleep-10-inch-Memory-Foam-and-Innerspring-Hybrid-Mattress.jpg?imwidth=480&impolicy=medium",
+        name: "OSleep 10-inch Memory Foam and Innerspring Hybrid Mattress",
+        price: "20205",
+    },
 
-    function myfunc(event){    
-    event.preventDefault();
-    let name=document.querySelector("#name").value;
-    localStorage.setItem("name",name);
-
-    let mail=document.querySelector("#email").value;
-    localStorage.setItem("email",mail);
-
-    let pass=document.querySelector("#pass").value;
-    localStorage.setItem("password",pass);
-
-        alert("SignUp Successful");
-}
-
-    let login_form=document.querySelector("#login");
-login_form.addEventListener("submit",logg);
-
-function logg(event){
-    event.preventDefault();
     
-    let mail=document.querySelector("#logemail").value;
-    let password=document.querySelector("#logpassword").value;
-     // console.log(password,mail);
+    ];
+    let cartarr=JSON.parse(localStorage.getItem("cart_items")) || [];
 
-    let lsemail=localStorage.getItem("email")
-    let lspass=localStorage.getItem("password")
+    mattressesData.forEach(function(el){
 
-    if(lsemail===mail && lspass===password){
-        alert("Login Successful");
-    }else{
-        alert("Wrong Details");
+        let card=document.createElement("div");
+        // creating img 
+        let Product_img=document.createElement("img");
+        Product_img.src=el.image_url;
+        // creating_title
+        let title=document.createElement("h3");
+        title.innerText=el.name;
+        // creating price 
+        let price=document.createElement("p")
+        price.style.fontSize="17px";
+        price.style.fontFamily="Helvetica, sans-serif";
+        price.innerText="price: "+el.price+" /-";
+        // creating button 
+        let btn=document.createElement("button");
+        btn.innerText="Add to Cart";
+        btn.style.backgroundColor="#27865f";
+        btn.addEventListener("click",function (){
+            addToCart(el);
+        });
+        card.append(Product_img,title,price, btn);
+        
+        document.querySelector("#container").append(card);
+    });
+    
+    function addToCart(el){
+    cartarr.push(el);
+    localStorage.setItem("cart_items", JSON.stringify(cartarr));
     }
-}
 </script>

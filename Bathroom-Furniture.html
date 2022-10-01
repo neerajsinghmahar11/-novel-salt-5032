@@ -338,6 +338,49 @@
             height: 20px;
         }
 
+        #container{
+            width: 75%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            height: auto;
+            gap: 60px 20px;
+            margin-top: 60px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+        #container>div>h3{
+            font-family:  Helvetica, sans-serif;
+            padding: 3%;
+            text-align: center;
+        }
+        #container>div>p{
+            margin: auto;
+            text-align: center;
+        }
+        #container>div>button{
+            margin: auto;
+            margin-top: 4px;
+            height: auto;
+            width: 40%;
+            border-radius: 20px;
+            padding:5px 5px;
+            background-color: #27865f;
+            cursor: pointer;
+
+        }
+
+        .product-heading{
+            width: 25%;
+            margin: auto;
+            margin-top: 160px;
+            padding-bottom: 10px;
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            font-size: 40px;
+            border-bottom: 2px solid #27865f;
+        }
     </style>
 </head>
 <body>
@@ -431,37 +474,9 @@
 </div>
     
     </div>
-    <!-- sign up   -->
-    <div class="AC">
-        <div>
-            <form id="signup">
-                <h2>Create Account</h2>
-                <label for="" >Full name</label><br>
-                <input id="name" type="text" placeholder="Enter your full name" >
-                <br> 
-                <label for="" i>Email</label><br>
-                <input id="email" type="text" placeholder="Enter email" >
-                <br>
-                <label for="" >Password</label><br>
-                <input id="pass" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#0272a2; color: #fff;" type="submit" value="SIGN UP">
-            </form>
-        </div>
-        <div>
-            <form id="login">
-                <h2>Sign in</h2>
-                <label for="">Email</label><br>
-                <input id="logemail" type="text" placeholder="Enter email" >
-                <br>
-                <label for="">Password</label><br>
-                <input id="logpassword" type="password" placeholder="Enter password" >
-                <br>
-                <input style="background-color:#27865f; color: #fff;" type="submit" value="LOG IN">
-        </form>
-        </div>
-    </div>
     
+    <h1 class="product-heading">Bathroom Furniture</h1>
+    <div id="container"></div>
     <!-- <footer></footer> -->
     <Footer>
         <div class="Footer">
@@ -567,41 +582,176 @@
     </Footer>
 </body>
 </html>
+
 <script>
-let sign_form=document.querySelector("#signup");
-    sign_form.addEventListener("submit",myfunc);
+    let bathroomData = [
 
-    function myfunc(event){    
-    event.preventDefault();
-    let name=document.querySelector("#name").value;
-    localStorage.setItem("name",name);
-
-    let mail=document.querySelector("#email").value;
-    localStorage.setItem("email",mail);
-
-    let pass=document.querySelector("#pass").value;
-    localStorage.setItem("password",pass);
-
-        alert("SignUp Successful");
-}
-
-    let login_form=document.querySelector("#login");
-login_form.addEventListener("submit",logg);
-
-function logg(event){
-    event.preventDefault();
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c5f8c13fd83a750281b04246295d4729d0023250/Spirich--Bathroom-Storage%2CTall-Corner-Cabinet-with-2-Doors-and-3-Tier-Shelves%2CWhite.jpg?imwidth=480&impolicy=medium",
+      name: "Spirich -Bathroom Storage,Tall Corner Cabinet with 2 Doors and 3 Tier Shelves,White",
+      price: "13820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c501d5bf252ea77d33516577c9653c55bcb42031/Render-Bathroom-Vanity.jpg?imwidth=480&impolicy=medium",
+      name: "Modway Walnut Grain Vanity with Ceramic Basin",
+      price: "32270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6606ddefec815d716931cf67cabf39ca36d2e65f/Marian-30%22-Single-Sink-Vanity.jpg?imwidth=480&impolicy=medium",
+      name: "Marian 30 Single Sink Vanity",
+      price: "33618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/c16a5cd9acec17d4e27d0a03992a93acc20ac304/Spirich-3-Tier-Bathroom-Cabinet-Shelves-Wooden%2CBathroom-Storage-with-door%2CWhite.jpg?imwidth=480&impolicy=medium",
+        name: "Spirich-3 Tier Bathroom Cabinet Shelves Wooden,Bathroom Storage with door,White",
+        price: "10505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/b439ad1c024a17525aa2d91463f0efc34bdfdf2b/Render-Bathroom-Vanity-Cabinet-%28Sink-Basin-Not-Included%29.jpg?imwidth=480&impolicy=medium",
+        name: "Render 23.5 Bathroom Vanity in Walnut (Sink Basin Not Included) - Walnut",
+        price: "18505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/79256df8024e44bb6cefb08c2cbe39f7b111d6b0/24-30-36-48-Inch-Single-Sink-Bathroom-Vanity-with-Soft-Close-Door.jpg?imwidth=480&impolicy=medium",
+        name: "BNK 24/30/36/48 Inch Single Sink Bathroom Vanity with Soft Close Door",
+        price: "57505",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c5f8c13fd83a750281b04246295d4729d0023250/Spirich--Bathroom-Storage%2CTall-Corner-Cabinet-with-2-Doors-and-3-Tier-Shelves%2CWhite.jpg?imwidth=480&impolicy=medium",
+      name: "Spirich -Bathroom Storage,Tall Corner Cabinet with 2 Doors and 3 Tier Shelves,White",
+      price: "13820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c501d5bf252ea77d33516577c9653c55bcb42031/Render-Bathroom-Vanity.jpg?imwidth=480&impolicy=medium",
+      name: "Modway Walnut Grain Vanity with Ceramic Basin",
+      price: "32270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6606ddefec815d716931cf67cabf39ca36d2e65f/Marian-30%22-Single-Sink-Vanity.jpg?imwidth=480&impolicy=medium",
+      name: "Marian 30 Single Sink Vanity",
+      price: "33618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/c16a5cd9acec17d4e27d0a03992a93acc20ac304/Spirich-3-Tier-Bathroom-Cabinet-Shelves-Wooden%2CBathroom-Storage-with-door%2CWhite.jpg?imwidth=480&impolicy=medium",
+        name: "Spirich-3 Tier Bathroom Cabinet Shelves Wooden,Bathroom Storage with door,White",
+        price: "10505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/b439ad1c024a17525aa2d91463f0efc34bdfdf2b/Render-Bathroom-Vanity-Cabinet-%28Sink-Basin-Not-Included%29.jpg?imwidth=480&impolicy=medium",
+        name: "Render 23.5 Bathroom Vanity in Walnut (Sink Basin Not Included) - Walnut",
+        price: "18505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/79256df8024e44bb6cefb08c2cbe39f7b111d6b0/24-30-36-48-Inch-Single-Sink-Bathroom-Vanity-with-Soft-Close-Door.jpg?imwidth=480&impolicy=medium",
+        name: "BNK 24/30/36/48 Inch Single Sink Bathroom Vanity with Soft Close Door",
+        price: "57505",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c5f8c13fd83a750281b04246295d4729d0023250/Spirich--Bathroom-Storage%2CTall-Corner-Cabinet-with-2-Doors-and-3-Tier-Shelves%2CWhite.jpg?imwidth=480&impolicy=medium",
+      name: "Spirich -Bathroom Storage,Tall Corner Cabinet with 2 Doors and 3 Tier Shelves,White",
+      price: "13820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c501d5bf252ea77d33516577c9653c55bcb42031/Render-Bathroom-Vanity.jpg?imwidth=480&impolicy=medium",
+      name: "Modway Walnut Grain Vanity with Ceramic Basin",
+      price: "32270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6606ddefec815d716931cf67cabf39ca36d2e65f/Marian-30%22-Single-Sink-Vanity.jpg?imwidth=480&impolicy=medium",
+      name: "Marian 30 Single Sink Vanity",
+      price: "33618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/c16a5cd9acec17d4e27d0a03992a93acc20ac304/Spirich-3-Tier-Bathroom-Cabinet-Shelves-Wooden%2CBathroom-Storage-with-door%2CWhite.jpg?imwidth=480&impolicy=medium",
+        name: "Spirich-3 Tier Bathroom Cabinet Shelves Wooden,Bathroom Storage with door,White",
+        price: "10505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/b439ad1c024a17525aa2d91463f0efc34bdfdf2b/Render-Bathroom-Vanity-Cabinet-%28Sink-Basin-Not-Included%29.jpg?imwidth=480&impolicy=medium",
+        name: "Render 23.5 Bathroom Vanity in Walnut (Sink Basin Not Included) - Walnut",
+        price: "18505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/79256df8024e44bb6cefb08c2cbe39f7b111d6b0/24-30-36-48-Inch-Single-Sink-Bathroom-Vanity-with-Soft-Close-Door.jpg?imwidth=480&impolicy=medium",
+        name: "BNK 24/30/36/48 Inch Single Sink Bathroom Vanity with Soft Close Door",
+        price: "57505",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c5f8c13fd83a750281b04246295d4729d0023250/Spirich--Bathroom-Storage%2CTall-Corner-Cabinet-with-2-Doors-and-3-Tier-Shelves%2CWhite.jpg?imwidth=480&impolicy=medium",
+      name: "Spirich -Bathroom Storage,Tall Corner Cabinet with 2 Doors and 3 Tier Shelves,White",
+      price: "13820",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c501d5bf252ea77d33516577c9653c55bcb42031/Render-Bathroom-Vanity.jpg?imwidth=480&impolicy=medium",
+      name: "Modway Walnut Grain Vanity with Ceramic Basin",
+      price: "32270",
+    },
+    {
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6606ddefec815d716931cf67cabf39ca36d2e65f/Marian-30%22-Single-Sink-Vanity.jpg?imwidth=480&impolicy=medium",
+      name: "Marian 30 Single Sink Vanity",
+      price: "33618",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/c16a5cd9acec17d4e27d0a03992a93acc20ac304/Spirich-3-Tier-Bathroom-Cabinet-Shelves-Wooden%2CBathroom-Storage-with-door%2CWhite.jpg?imwidth=480&impolicy=medium",
+        name: "Spirich-3 Tier Bathroom Cabinet Shelves Wooden,Bathroom Storage with door,White",
+        price: "10505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/b439ad1c024a17525aa2d91463f0efc34bdfdf2b/Render-Bathroom-Vanity-Cabinet-%28Sink-Basin-Not-Included%29.jpg?imwidth=480&impolicy=medium",
+        name: "Render 23.5 Bathroom Vanity in Walnut (Sink Basin Not Included) - Walnut",
+        price: "18505",
+    },
+    {
+        image_url:"https://ak1.ostkcdn.com/images/products/is/images/direct/79256df8024e44bb6cefb08c2cbe39f7b111d6b0/24-30-36-48-Inch-Single-Sink-Bathroom-Vanity-with-Soft-Close-Door.jpg?imwidth=480&impolicy=medium",
+        name: "BNK 24/30/36/48 Inch Single Sink Bathroom Vanity with Soft Close Door",
+        price: "57505",
+    },
     
-    let mail=document.querySelector("#logemail").value;
-    let password=document.querySelector("#logpassword").value;
-     // console.log(password,mail);
+    
+   
+      ];
+    let cartarr=JSON.parse(localStorage.getItem("cart_items")) || [];
 
-    let lsemail=localStorage.getItem("email")
-    let lspass=localStorage.getItem("password")
+    bathroomData.forEach(function(el){
 
-    if(lsemail===mail && lspass===password){
-        alert("Login Successful");
-    }else{
-        alert("Wrong Details");
+        let card=document.createElement("div");
+        // creating img 
+        let Product_img=document.createElement("img");
+        Product_img.src=el.image_url;
+        // creating_title
+        let title=document.createElement("h3");
+        title.innerText=el.name;
+        // creating price 
+        let price=document.createElement("p")
+        price.style.fontSize="17px";
+        price.style.fontFamily="Helvetica, sans-serif";
+        price.innerText="price: "+el.price+" /-";
+        // creating button 
+        let btn=document.createElement("button");
+        btn.innerText="Add to Cart";
+        btn.style.backgroundColor="#27865f";
+        btn.addEventListener("click",function (){
+            addToCart(el);
+        });
+        card.append(Product_img,title,price, btn);
+        
+        document.querySelector("#container").append(card);
+    });
+    
+    function addToCart(el){
+    cartarr.push(el);
+    localStorage.setItem("cart_items", JSON.stringify(cartarr));
     }
-}
 </script>
